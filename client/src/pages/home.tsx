@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useABTest } from "@/hooks/use-ab-test";
+import { AB_TESTS, trackABTestConversion } from "@/lib/ab-testing";
 import { HeroSection } from "@/components/sections/hero-section";
 import { USPSection } from "@/components/sections/usp-section";
 import { SyllabusSection } from "@/components/sections/syllabus-section";
@@ -20,6 +22,10 @@ export default function Home() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [userRegion, setUserRegion] = useState<"domestic" | "international">("international");
 
+  // A/B Testing
+  const heroHeadlineTest = useABTest(AB_TESTS.HERO_HEADLINE);
+  const primaryCTATest = useABTest(AB_TESTS.PRIMARY_CTA);
+
   const { data: geoData } = useQuery({
     queryKey: ["/api/geo"],
   });
@@ -30,13 +36,34 @@ export default function Home() {
     }
   }, [geoData]);
 
+  // Create dynamic hero data based on A/B test variants
+  const heroData = {
+    ...landingData.hero,
+    headline: (heroHeadlineTest.variant as any).headline || landingData.hero.headline,
+    subheadline: (heroHeadlineTest.variant as any).subheadline || landingData.hero.subheadline,
+    buttons: {
+      ...landingData.hero.buttons,
+      primary: {
+        ...landingData.hero.buttons.primary,
+        text: (primaryCTATest.variant as any).name || landingData.hero.buttons.primary.text,
+      },
+    },
+  };
+
+  // Track conversion when user clicks enrollment
+  const handleEnrollmentClick = () => {
+    trackABTestConversion(AB_TESTS.HERO_HEADLINE.testId, heroHeadlineTest.variantId, 'enrollment_click');
+    trackABTestConversion(AB_TESTS.PRIMARY_CTA.testId, primaryCTATest.variantId, 'enrollment_click');
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground scroll-smooth">
       <StructuredData />
       
       <HeroSection 
-        data={landingData.hero} 
+        data={heroData} 
         onVideoClick={() => setIsVideoOpen(true)}
+        onEnrollClick={handleEnrollmentClick}
       />
       
       <USPSection data={landingData.usps} />

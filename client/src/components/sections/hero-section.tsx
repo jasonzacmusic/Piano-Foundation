@@ -15,9 +15,10 @@ interface HeroProps {
     heroImage: string;
   };
   onVideoClick: () => void;
+  onEnrollClick?: () => void;
 }
 
-export function HeroSection({ data, onVideoClick }: HeroProps) {
+export function HeroSection({ data, onVideoClick, onEnrollClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
@@ -64,6 +65,7 @@ export function HeroSection({ data, onVideoClick }: HeroProps) {
               className="text-base md:text-lg px-8 py-6 min-h-14"
               onClick={() => {
                 trackEnrollmentClick('hero_primary_cta');
+                onEnrollClick?.();
                 window.open(data.buttons.primary.link, '_blank');
               }}
               data-testid="button-enrol-hero"
