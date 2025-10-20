@@ -18,7 +18,7 @@
       "Graded Certificate",
       "Assignments & Feedback"
     ],
-    "heroImage": "/images/060A0073_1760966749362.JPG"
+    "heroImage": "/images/jason-piano-2.jpg"
   },
 
   "usps": [
@@ -153,37 +153,37 @@
       "quote": "I joined as a complete beginner and performed my first live show in 6 months!",
       "name": "Aarushi",
       "role": "Student",
-      "photo": "/images/Jason Zac (1 of 1)-11_1760966791794.jpg"
+      "photo": "/images/jason-piano-1.jpg"
     },
     {
       "quote": "This course gave me a solid foundation and made piano fun. I now use it in my own songs.",
       "name": "Geeth",
       "role": "Producer",
-      "photo": "/images/060A0048_1760966768339.JPG"
+      "photo": "/images/jason-piano-3.jpg"
     },
     {
       "quote": "The bottom-up approach changed everything for me. I can now accompany singers in any key!",
       "name": "Priya Sharma",
       "role": "Accompanist",
-      "photo": "/images/060A0073_1760966749362.JPG"
+      "photo": "/images/jason-piano-4.jpg"
     },
     {
       "quote": "As a 68-year-old beginner, I was nervous. But the teaching style made it so approachable and fun!",
       "name": "Ramesh Kumar",
       "role": "Hobbyist",
-      "photo": "/images/Jason Zac (1 of 1)-11_1760966791794.jpg"
+      "photo": "/images/jason-piano-1.jpg"
     },
     {
       "quote": "After years of classical training, this course opened my eyes to practical musicianship. Game changer!",
       "name": "Meera Iyer",
       "role": "Classical Pianist",
-      "photo": "/images/060A0048_1760966768339.JPG"
+      "photo": "/images/jason-piano-3.jpg"
     },
     {
       "quote": "The ear training and rhythm modules were incredible. I can now play by ear and improvise confidently.",
       "name": "Arjun Desai",
       "role": "Songwriter",
-      "photo": "/images/060A0073_1760966749362.JPG"
+      "photo": "/images/jason-piano-4.jpg"
     }
   ],
 
@@ -249,7 +249,7 @@
 
   "instructor": {
     "name": "Jason Zac",
-    "photo": "/images/jason-zac.jpg",
+    "photo": "/images/jason-piano-2.jpg",
     "bio": "Professional musician and educator with years of experience in blues, gospel, Bollywood, and Indian classical music."
   }
 }
