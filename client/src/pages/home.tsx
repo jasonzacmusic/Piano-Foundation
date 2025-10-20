@@ -12,6 +12,7 @@ import { SEOSection } from "@/components/sections/seo-section";
 import { Footer } from "@/components/sections/footer";
 import { StickyCTA } from "@/components/sticky-cta";
 import { VideoModal } from "@/components/video-modal";
+import { StructuredData } from "@/components/structured-data";
 import landingData from "../../../content/landing.json";
 
 export default function Home() {
@@ -29,7 +30,9 @@ export default function Home() {
   }, [geoData]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground scroll-smooth">
+      <StructuredData />
+      
       <HeroSection 
         data={landingData.hero} 
         onVideoClick={() => setIsVideoOpen(true)}
