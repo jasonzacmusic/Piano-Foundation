@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, Youtube, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackEnrollmentClick, trackWhatsAppClick, trackEmailClick } from "@/lib/analytics";
+import { trackEnrollmentClick, trackWhatsAppClick, trackEmailClick, trackEnrollmentFormOpened } from "@/lib/analytics";
 
 interface FooterData {
   logo: string;
@@ -84,6 +84,7 @@ export function Footer({ data }: FooterProps) {
                 size="sm"
                 onClick={() => {
                   trackEnrollmentClick('footer_cta');
+                  trackEnrollmentFormOpened('footer_cta');
                   window.open(data.links.enrolForm, '_blank');
                 }}
                 data-testid="button-enrol-footer"

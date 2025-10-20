@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
-import { trackEnrollmentClick } from "@/lib/analytics";
+import { trackEnrollmentClick, trackEnrollmentFormOpened } from "@/lib/analytics";
 
 interface StickyCTAProps {
   enrollLink: string;
@@ -14,6 +14,7 @@ export function StickyCTA({ enrollLink }: StickyCTAProps) {
         className="w-full text-base py-6 min-h-14"
         onClick={() => {
           trackEnrollmentClick('sticky_mobile_cta');
+          trackEnrollmentFormOpened('sticky_mobile_cta');
           window.open(enrollLink, '_blank');
         }}
         data-testid="button-sticky-enrol"

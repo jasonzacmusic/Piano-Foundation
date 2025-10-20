@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useABTest } from "@/hooks/use-ab-test";
 import { AB_TESTS, trackABTestConversion } from "@/lib/ab-testing";
+import { trackEnrollmentFormReturn } from "@/lib/analytics";
 import { HeroSection } from "@/components/sections/hero-section";
 import { USPSection } from "@/components/sections/usp-section";
 import { SyllabusSection } from "@/components/sections/syllabus-section";
@@ -35,6 +36,20 @@ export default function Home() {
       setUserRegion(geoData.region);
     }
   }, [geoData]);
+
+  // Track when user returns to page (potential form completion)
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        trackEnrollmentFormReturn();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
 
   // Create dynamic hero data based on A/B test variants
   const heroData = {
