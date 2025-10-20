@@ -226,7 +226,7 @@
   },
 
   "footer": {
-    "logo": "/images/NSM LOGO White_1760966677704.png",
+    "logo": "/images/nsm-logo-white.png",
     "tagline": "Nathaniel School of Music",
     "description": "Foundation Piano Course - Learn the right way",
     "contact": {
@@ -249,7 +249,7 @@
 
   "instructor": {
     "name": "Jason Zac",
-    "photo": "/images/Jason Zac (1 of 1)-11_1760966791794.jpg",
+    "photo": "/images/jason-zac.jpg",
     "bio": "Professional musician and educator with years of experience in blues, gospel, Bollywood, and Indian classical music."
   }
 }
