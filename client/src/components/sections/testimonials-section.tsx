@@ -3,8 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 
 interface Testimonial {
   quote: string;
@@ -18,36 +17,27 @@ interface TestimonialsSectionProps {
 }
 
 export function TestimonialsSection({ data }: TestimonialsSectionProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    skipSnaps: false,
-  });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 2; // Show 2 testimonials at a time on desktop, 1 on mobile
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
+  const totalPages = Math.ceil(data.length / itemsPerPage);
 
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-  }, [emblaApi, onSelect]);
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const visibleTestimonials = data.slice(
+    currentIndex * itemsPerPage,
+    currentIndex * itemsPerPage + itemsPerPage
+  );
 
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-background">
@@ -62,20 +52,21 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
         </div>
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
-              {data.map((testimonial, index) => (
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[400px]">
+            {visibleTestimonials.map((testimonial, index) => {
+              const globalIndex = currentIndex * itemsPerPage + index;
+              return (
                 <motion.div
-                  key={index}
-                  className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] min-w-0"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  key={globalIndex}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
                 >
                   <Card 
                     className="p-8 md:p-10 h-full hover-elevate transition-all"
-                    data-testid={`card-testimonial-${index}`}
+                    data-testid={`card-testimonial-${globalIndex}`}
                   >
                     <div className="space-y-6">
                       <Quote className="w-10 h-10 text-primary/30" />
@@ -101,17 +92,16 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
                     </div>
                   </Card>
                 </motion.div>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Controls */}
           <div className="flex items-center justify-center gap-4 mt-8">
             <Button
               variant="outline"
               size="icon"
-              onClick={scrollPrev}
-              disabled={!canScrollPrev}
+              onClick={prevSlide}
               data-testid="button-carousel-prev"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -119,17 +109,17 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
             
             {/* Dots */}
             <div className="flex gap-2">
-              {data.map((_, index) => (
+              {Array.from({ length: totalPages }).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => emblaApi?.scrollTo(index)}
+                  onClick={() => goToSlide(index)}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    index === selectedIndex
+                    index === currentIndex
                       ? "bg-primary w-8"
                       : "bg-muted-foreground/30"
                   }`}
                   data-testid={`button-carousel-dot-${index}`}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`Go to page ${index + 1}`}
                 />
               ))}
             </div>
@@ -137,8 +127,7 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
             <Button
               variant="outline"
               size="icon"
-              onClick={scrollNext}
-              disabled={!canScrollNext}
+              onClick={nextSlide}
               data-testid="button-carousel-next"
             >
               <ChevronRight className="w-5 h-5" />

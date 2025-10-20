@@ -10,6 +10,16 @@ The site showcases a 6-month structured piano training program that combines pla
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+**October 20, 2025 - Phase 2 Enhancement Release**
+- Added Google Analytics integration with comprehensive event tracking
+- Implemented A/B testing system for hero headlines and CTA buttons
+- Expanded testimonials from 2 to 6 reviews with interactive Embla Carousel
+- Created new Course Preview section with embedded demo lesson video
+- Built advanced form analytics with engagement tracking and completion monitoring
+- All analytics events tied to Google Analytics for conversion optimization
+
 ## System Architecture
 
 ### Frontend Architecture
@@ -29,7 +39,18 @@ Preferred communication style: Simple, everyday language.
 **Component Architecture**
 - Section-based organization (`/client/src/components/sections/`) for landing page blocks
 - Reusable UI components from shadcn/ui (`/client/src/components/ui/`)
-- Modular design allowing independent updates to hero, USPs, syllabus, testimonials, fees, FAQ sections
+- Modular design allowing independent updates to all 11 sections:
+  - Hero (with A/B testing support)
+  - USPs (7 feature cards)
+  - Syllabus (4 learning categories)
+  - Course Structure
+  - Course Preview (new - demo video section)
+  - Who It's For (5 learner types)
+  - Testimonials (6 reviews in interactive carousel)
+  - Fees (geo-targeted pricing)
+  - FAQ (accordion)
+  - SEO paragraph
+  - Footer
 
 **State Management**
 - React Query (@tanstack/react-query) for server state and API data fetching
@@ -72,7 +93,7 @@ Preferred communication style: Simple, everyday language.
 **Third-Party UI Libraries**
 - Radix UI primitives (accordion, dialog, dropdown, popover, etc.) for accessible components
 - Lucide React for icon system
-- Embla Carousel for potential image/testimonial sliders
+- Embla Carousel for testimonial slider (active - 6 testimonials with navigation)
 - cmdk for command palette functionality (if needed)
 
 **External Services Integration**
@@ -87,6 +108,13 @@ Preferred communication style: Simple, everyday language.
 - Google Fonts: Playfair Display and Inter loaded via CDN
 
 **SEO & Analytics**
+- **Google Analytics**: Full integration with event tracking for conversions, video plays, and user engagement
+- **Advanced Form Analytics**: Track enrollment form opens, engagement time, and potential completions
+- **A/B Testing System**: Built-in experimentation framework with localStorage persistence
+  - Hero headline variations (3 variants)
+  - Primary CTA button text variations (4 variants)
+  - Automatic variant assignment and exposure tracking
+  - Conversion tracking tied to A/B test variants
 - Structured data (JSON-LD schema) for Course, Organization, and Offer markup
 - Open Graph and Twitter Card meta tags for social sharing
 - Semantic HTML with proper heading hierarchy
