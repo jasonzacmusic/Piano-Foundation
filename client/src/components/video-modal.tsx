@@ -24,9 +24,12 @@ export function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl w-full p-0" data-testid="modal-video">
+      <DialogContent className="max-w-4xl w-full p-0" data-testid="modal-video" aria-describedby="video-description">
         <DialogHeader className="sr-only">
           <DialogTitle>Course Explainer Video</DialogTitle>
+          <p id="video-description" className="sr-only">
+            Watch the Nathaniel School of Music Foundation Piano Course explainer video
+          </p>
         </DialogHeader>
         
         <div className="aspect-video w-full">
