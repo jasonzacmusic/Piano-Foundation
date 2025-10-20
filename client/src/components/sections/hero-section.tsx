@@ -29,7 +29,7 @@ export function HeroSection({ data, onVideoClick, onEnrollClick }: HeroProps) {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/70" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-24">
