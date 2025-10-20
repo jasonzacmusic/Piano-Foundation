@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { USPSection } from "@/components/sections/usp-section";
 import { SyllabusSection } from "@/components/sections/syllabus-section";
 import { CourseStructureSection } from "@/components/sections/course-structure-section";
+import { CoursePreviewSection } from "@/components/sections/course-preview-section";
 import { WhoIsForSection } from "@/components/sections/who-is-for-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { FeesSection } from "@/components/sections/fees-section";
@@ -43,6 +44,8 @@ export default function Home() {
       <SyllabusSection data={landingData.syllabus} />
       
       <CourseStructureSection data={landingData.structure} />
+      
+      <CoursePreviewSection data={landingData.coursePreview} />
       
       <WhoIsForSection data={landingData.whoIsFor} />
       

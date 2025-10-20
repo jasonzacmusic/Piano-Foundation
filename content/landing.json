@@ -118,6 +118,13 @@
     ]
   },
 
+  "coursePreview": {
+    "title": "Get a Taste of What You'll Learn",
+    "subtitle": "Watch a free demo lesson from our Foundation Piano Course",
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "description": "In this 10-minute preview, you'll see our unique bottom-up teaching approach in action. Learn how we make complex musical concepts simple and practical."
+  },
+
   "whoIsFor": [
     {
       "title": "Absolute Beginners",
