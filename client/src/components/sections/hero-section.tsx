@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { trackEnrollmentClick, trackVideoPlay } from "@/lib/analytics";
 
 interface HeroProps {
   data: {
@@ -61,7 +62,10 @@ export function HeroSection({ data, onVideoClick }: HeroProps) {
             <Button
               size="lg"
               className="text-base md:text-lg px-8 py-6 min-h-14"
-              onClick={() => window.open(data.buttons.primary.link, '_blank')}
+              onClick={() => {
+                trackEnrollmentClick('hero_primary_cta');
+                window.open(data.buttons.primary.link, '_blank');
+              }}
               data-testid="button-enrol-hero"
             >
               {data.buttons.primary.text}
@@ -71,7 +75,10 @@ export function HeroSection({ data, onVideoClick }: HeroProps) {
               size="lg"
               variant="outline"
               className="text-base md:text-lg px-8 py-6 min-h-14 backdrop-blur-sm bg-background/10"
-              onClick={onVideoClick}
+              onClick={() => {
+                trackVideoPlay('hero_explainer_video');
+                onVideoClick();
+              }}
               data-testid="button-video-hero"
             >
               <Play className="w-5 h-5 mr-2" />

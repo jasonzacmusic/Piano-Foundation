@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Youtube, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackEnrollmentClick, trackWhatsAppClick, trackEmailClick } from "@/lib/analytics";
 
 interface FooterData {
   logo: string;
@@ -69,7 +70,10 @@ export function Footer({ data }: FooterProps) {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => window.open(data.links.whatsapp, '_blank')}
+                onClick={() => {
+                  trackWhatsAppClick();
+                  window.open(data.links.whatsapp, '_blank');
+                }}
                 data-testid="button-whatsapp-footer"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
@@ -78,7 +82,10 @@ export function Footer({ data }: FooterProps) {
               <Button
                 variant="default"
                 size="sm"
-                onClick={() => window.open(data.links.enrolForm, '_blank')}
+                onClick={() => {
+                  trackEnrollmentClick('footer_cta');
+                  window.open(data.links.enrolForm, '_blank');
+                }}
                 data-testid="button-enrol-footer"
               >
                 Enrol Now
@@ -91,6 +98,7 @@ export function Footer({ data }: FooterProps) {
             <div className="space-y-4">
               <a
                 href={data.links.email}
+                onClick={trackEmailClick}
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"
                 data-testid="link-email-footer"
               >
