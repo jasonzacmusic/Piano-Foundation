@@ -1,0 +1,277 @@
+You are my senior full-stack engineer and UI/UX designer. Goal: Build a fast, modern, SEO-optimized single-page landing site for the Nathaniel School of Music – Foundation Piano Course. The page must be lead-focused: every CTA (buttons, WhatsApp, email, form) must generate enquiries/sign-ups for my team.
+
+🔧 Tech & Setup
+* Framework: Next.js (App Router) + TypeScript
+* Styling: Tailwind CSS + shadcn/ui components
+* Icons: lucide-react
+* Animations: Framer Motion (subtle fade/slide effects)
+* Content Management:
+    * All copy, syllabus, fees, testimonials, FAQs, and links live in /content/landing.json.
+    * All images (my photos + logo) in /public/images.
+    * This allows me to change text, images, or links manually without code changes or re-prompts.
+
+📸 Assets
+* Use my real photos (hero, teaching, headshot, performance).
+* Use the Nathaniel School of Music logo (SVG/PNG).
+* Replit can add tasteful stock piano/music images if needed to polish design.
+
+💳 Fee Logic
+* Detect visitor region via geo-IP.
+* Indian Subcontinent (India, Nepal, Sri Lanka, Bangladesh, Pakistan, Bhutan, Maldives): Show ₹20,000 (+GST).
+* All other countries: Show $420.
+* These values should be stored in landing.json so I can edit them later.
+
+📞 Contact & Lead Capture
+All contact points must work:
+* Main Enrolment Form (primary CTA): https://forms.gle/rrfqJzL5TzoT57Nd6
+* WhatsApp (integrated link): +91 77604 56847
+* Email: music@nathanielschool.com
+* Location: Nathaniel School of Music, Langford Town & Sahakar Nagar, Bangalore, India
+👉 Add a sticky mobile CTA button: “📋 Enrol Now” → opens the enrolment form.
+
+📄 Page Structure
+1. Hero Section
+    * Hero photo (me at piano) with overlay.
+    * H1: Learn Piano the Right Way – From Beginner to Performer in 6 Months
+    * Subheadline: Structured. Practical. Performance-based. For all ages.
+    * Buttons:
+        * 🟠 Enrol Now → enrolment form link
+        * ⚪ Watch Explainer Video → opens lightbox
+    * Trust row: Live Online | Hybrid (Bangalore) | Graded Certificate | Assignments + Feedback
+2. Why We’re Different (USP cards)
+    * Bottom-Up Approach (rhythm/chords/ear first)
+    * All 12 Keys
+    * Accompaniment + Solo Playing
+    * Genres: Blues, Gospel, Bollywood, Ragas
+    * Assignments + Feedback
+    * Flexible Modes: Online/Offline/Hybrid + Recordings
+    * For All Ages (7–75+)
+3. What You’ll Learn (from PDF + Excel)
+    * Piano Skills → scales, chords, inversions, styles
+    * Theory → notation, circle of fifths, ragas
+    * Ear Training → intervals, transcription, scale detection
+    * Rhythm → time signatures, swing, Afro-Cuban, Konnakol
+4. Course Structure
+    * 6 months (32+ hours)
+    * 20 Instrument Classes + 12 Musicianship Classes
+    * Assignments + Exams
+    * Graded Certificate
+    * Live sessions + HD recordings
+5. Who It’s For
+    * Beginners | Hobbyists | Producers/DJs | Songwriters | Classical Learners (Trinity/ABRSM students)
+6. Testimonials
+    * 2–3 testimonial cards (JSON-driven, replaceable).
+7. Fees
+    * Show ₹20,000 (+GST) or $420 dynamically.
+    * Buttons: Enrol Now (Form) | Chat on WhatsApp
+8. FAQ (Accordion)
+    * Do I need a keyboard?
+    * Is this only for beginners?
+    * What if I miss a class?
+    * What age group is this for?
+9. SEO Closing Paragraph
+    * Include keywords: Beginner Piano Course in Bangalore, online piano lessons, accompaniment and solo skills, structured 6-month training.
+10. Footer
+* NSM logo
+* Quick links: YouTube | Instagram | Enrol Form | WhatsApp
+* Email: music@nathanielschool.com
+* Phone/WhatsApp: +91 77604 56847
+* Location: Langford Town & Sahakar Nagar, Bangalore
+
+🎨 Visual Design
+* Colors: Black / White / Gold accent
+* Typography: Bold, modern heading font + simple sans-serif body font
+* Layout: Spacious, responsive, mobile-first
+* Images: Use my real photos; tasteful piano stock as support
+* Animations: Gentle scroll animations on hero text, USP cards, CTAs
+
+✅ Acceptance Criteria
+* Production-ready Next.js project
+* Fully responsive, accessible (alt text, aria labels)
+* Lighthouse: Perf ≥ 90, SEO ≥ 95, Accessibility ≥ 95
+* All text, syllabus, testimonials, fees, FAQs in landing.json
+* All images in /public/images (easy to replace)
+* Fee logic working (₹20,000 + GST vs $420)
+* All CTAs functional: Enrolment Form, WhatsApp, Email
+* Sticky mobile CTA button present
+
+👉 Build this end-to-end. Use my photos/logo, but feel free to enhance with subtle design elements. Ensure my team can change text, links, or photos easily via landing.json and /public/images.
+
+landing.json
+
+{
+  "hero": {
+    "headline": "Learn Piano the Right Way – From Beginner to Performer in 6 Months",
+    "subheadline": "Structured. Practical. Performance-based. For all ages.",
+    "buttons": {
+      "primary": {
+        "text": "Enrol Now",
+        "link": "https://forms.gle/rrfqJzL5TzoT57Nd6"
+      },
+      "secondary": {
+        "text": "Watch Explainer Video",
+        "link": "VIDEO_URL_EXPLAINER"
+      }
+    },
+    "trust": [
+      "Live Online",
+      "Hybrid (Bangalore)",
+      "Graded Certificate",
+      "Assignments & Feedback"
+    ],
+    "heroImage": "/public/images/jason-hero.jpg"
+  },
+
+  "usps": [
+    {
+      "icon": "Music",
+      "title": "Bottom-Up Approach",
+      "description": "We start with rhythm, chords, and ear training before melody for real-world skills."
+    },
+    {
+      "icon": "Keyboard",
+      "title": "All 12 Keys",
+      "description": "Go beyond C major — play confidently in every key."
+    },
+    {
+      "icon": "Users",
+      "title": "Accompaniment + Solo Playing",
+      "description": "Support singers & bands, or perform solo with melody and harmony."
+    },
+    {
+      "icon": "Library",
+      "title": "Genre Diversity",
+      "description": "Learn blues, gospel, Bollywood, pop, and even Indian ragas."
+    },
+    {
+      "icon": "CheckCircle",
+      "title": "Assignments & Feedback",
+      "description": "Weekly practice, structured feedback, and real exams like a true school."
+    },
+    {
+      "icon": "Video",
+      "title": "Flexible Modes",
+      "description": "Attend live online, offline in Bangalore, or hybrid — with HD recordings."
+    },
+    {
+      "icon": "Smile",
+      "title": "For All Ages",
+      "description": "We’ve trained students from age 7 to 75+. It’s never too late to start."
+    }
+  ],
+
+  "syllabus": {
+    "pianoSkills": [
+      "Note recognition & 5-finger drills",
+      "Major, Minor, Pentatonic & Blues scales",
+      "Chord inversions, block chords, 12-bar blues",
+      "Left-hand patterns + right-hand melody",
+      "Styles: Waltz, Oom-Pah, Afro-Cuban, Folk, Rock"
+    ],
+    "theory": [
+      "Staff notation & note values",
+      "Intervals & circle of fifths",
+      "Chord progressions & harmony",
+      "Intro to ragas & transposition",
+      "Song structure basics"
+    ],
+    "earTraining": [
+      "Intervals & melodic curves",
+      "Transcription of melodies & rhythms",
+      "Identifying scales by ear",
+      "Computing song key by listening"
+    ],
+    "rhythm": [
+      "Bars, beats & sub-beats",
+      "Straight vs swing feels",
+      "Triplets & sixteenth notes",
+      "Afro-Cuban rhythms & Claves",
+      "Basics of Konnakol"
+    ]
+  },
+
+  "structure": {
+    "duration": "6 months (32+ hours)",
+    "classes": [
+      "20 Instrument Classes",
+      "12 Musicianship Classes (Theory, Ear Training, Rhythm, Composition)"
+    ],
+    "features": [
+      "Weekly assignments & exams",
+      "Graded certificate",
+      "Live sessions + recordings for every class"
+    ]
+  },
+
+  "whoIsFor": [
+    "Absolute Beginners",
+    "Hobbyists",
+    "Producers & DJs",
+    "Songwriters",
+    "Classical Learners (Trinity/ABRSM students)"
+  ],
+
+  "testimonials": [
+    {
+      "quote": "I joined as a complete beginner and performed my first live show in 6 months!",
+      "name": "Aarushi",
+      "photo": "/public/images/student-aarushi.jpg"
+    },
+    {
+      "quote": "This course gave me a solid foundation and made piano fun. I now use it in my own songs.",
+      "name": "Geeth, Producer",
+      "photo": "/public/images/student-geeth.jpg"
+    }
+  ],
+
+  "fees": {
+    "domestic": {
+      "region": ["India", "Nepal", "Sri Lanka", "Bangladesh", "Pakistan", "Bhutan", "Maldives"],
+      "amount": "₹20,000 (+GST)"
+    },
+    "international": {
+      "region": "All Other Countries",
+      "amount": "$420"
+    }
+  },
+
+  "faq": [
+    {
+      "question": "Do I need my own keyboard?",
+      "answer": "Yes, a 61 or 88-key digital piano/keyboard is recommended for practice."
+    },
+    {
+      "question": "Is this only for beginners?",
+      "answer": "No, even exam-trained students (Grade 4–6) join us for a new, practical perspective."
+    },
+    {
+      "question": "What if I miss a class?",
+      "answer": "Every class is recorded in HD and available to watch later."
+    },
+    {
+      "question": "What age group is this for?",
+      "answer": "We have students from ages 7 to 75+ successfully learning with us."
+    }
+  ],
+
+  "seo": {
+    "title": "Beginner Piano Course in Bangalore | Nathaniel School of Music",
+    "description": "Structured 6-month piano training program combining playing, theory, ear training & rhythm. Learn online, offline, or hybrid. ₹20,000 (+GST) in India, $420 international."
+  },
+
+  "footer": {
+    "logo": "/public/images/logo-nsm.svg",
+    "links": {
+      "youtube": "https://youtube.com/jasonzac",
+      "instagram": "https://instagram.com/jasonzac",
+      "whatsapp": "https://wa.me/917760456847",
+      "email": "mailto:music@nathanielschool.com",
+      "enrolForm": "https://forms.gle/rrfqJzL5TzoT57Nd6",
+      "locations": [
+        "Langford Town, Bangalore, India",
+        "Sahakar Nagar, Bangalore, India"
+      ]
+    }
+  }
+}
+
