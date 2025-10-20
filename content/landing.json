@@ -1,0 +1,224 @@
+{
+  "hero": {
+    "headline": "Learn Piano the Right Way – From Beginner to Performer in 6 Months",
+    "subheadline": "Structured. Practical. Performance-based. For all ages.",
+    "buttons": {
+      "primary": {
+        "text": "Enrol Now",
+        "link": "https://forms.gle/rrfqJzL5TzoT57Nd6"
+      },
+      "secondary": {
+        "text": "Watch Explainer Video",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    },
+    "trust": [
+      "Live Online",
+      "Hybrid (Bangalore)",
+      "Graded Certificate",
+      "Assignments & Feedback"
+    ],
+    "heroImage": "/images/060A0073_1760966749362.JPG"
+  },
+
+  "usps": [
+    {
+      "icon": "Music",
+      "title": "Bottom-Up Approach",
+      "description": "We start with rhythm, chords, and ear training before melody for real-world skills."
+    },
+    {
+      "icon": "Piano",
+      "title": "All 12 Keys",
+      "description": "Go beyond C major — play confidently in every key."
+    },
+    {
+      "icon": "Users",
+      "title": "Accompaniment + Solo Playing",
+      "description": "Support singers & bands, or perform solo with melody and harmony."
+    },
+    {
+      "icon": "Library",
+      "title": "Genre Diversity",
+      "description": "Learn blues, gospel, Bollywood, pop, and even Indian ragas."
+    },
+    {
+      "icon": "CheckCircle",
+      "title": "Assignments & Feedback",
+      "description": "Weekly practice, structured feedback, and real exams like a true school."
+    },
+    {
+      "icon": "Video",
+      "title": "Flexible Modes",
+      "description": "Attend live online, offline in Bangalore, or hybrid — with HD recordings."
+    },
+    {
+      "icon": "Smile",
+      "title": "For All Ages",
+      "description": "We've trained students from age 7 to 75+. It's never too late to start."
+    }
+  ],
+
+  "syllabus": {
+    "pianoSkills": {
+      "title": "Piano Skills",
+      "icon": "Piano",
+      "items": [
+        "Note recognition & 5-finger drills",
+        "Major, Minor, Pentatonic & Blues scales",
+        "Chord inversions, block chords, 12-bar blues",
+        "Left-hand patterns + right-hand melody",
+        "Styles: Waltz, Oom-Pah, Afro-Cuban, Folk, Rock"
+      ]
+    },
+    "theory": {
+      "title": "Music Theory",
+      "icon": "BookOpen",
+      "items": [
+        "Staff notation & note values",
+        "Intervals & circle of fifths",
+        "Chord progressions & harmony",
+        "Intro to ragas & transposition",
+        "Song structure basics"
+      ]
+    },
+    "earTraining": {
+      "title": "Ear Training",
+      "icon": "Ear",
+      "items": [
+        "Intervals & melodic curves",
+        "Transcription of melodies & rhythms",
+        "Identifying scales by ear",
+        "Computing song key by listening"
+      ]
+    },
+    "rhythm": {
+      "title": "Rhythm",
+      "icon": "Music2",
+      "items": [
+        "Bars, beats & sub-beats",
+        "Straight vs swing feels",
+        "Triplets & sixteenth notes",
+        "Afro-Cuban rhythms & Claves",
+        "Basics of Konnakol"
+      ]
+    }
+  },
+
+  "structure": {
+    "duration": "6 months (32+ hours)",
+    "classes": [
+      "20 Instrument Classes",
+      "12 Musicianship Classes (Theory, Ear Training, Rhythm, Composition)"
+    ],
+    "features": [
+      "Weekly assignments & exams",
+      "Graded certificate",
+      "Live sessions + recordings for every class"
+    ]
+  },
+
+  "whoIsFor": [
+    {
+      "title": "Absolute Beginners",
+      "description": "Start your musical journey with confidence"
+    },
+    {
+      "title": "Hobbyists",
+      "description": "Turn your passion into performance"
+    },
+    {
+      "title": "Producers & DJs",
+      "description": "Add live piano skills to your productions"
+    },
+    {
+      "title": "Songwriters",
+      "description": "Compose with deeper musical knowledge"
+    },
+    {
+      "title": "Classical Learners",
+      "description": "Trinity/ABRSM students seeking practical skills"
+    }
+  ],
+
+  "testimonials": [
+    {
+      "quote": "I joined as a complete beginner and performed my first live show in 6 months!",
+      "name": "Aarushi",
+      "role": "Student",
+      "photo": "/images/Jason Zac (1 of 1)-11_1760966791794.jpg"
+    },
+    {
+      "quote": "This course gave me a solid foundation and made piano fun. I now use it in my own songs.",
+      "name": "Geeth",
+      "role": "Producer",
+      "photo": "/images/060A0048_1760966768339.JPG"
+    }
+  ],
+
+  "fees": {
+    "domestic": {
+      "region": ["India", "Nepal", "Sri Lanka", "Bangladesh", "Pakistan", "Bhutan", "Maldives"],
+      "amount": "₹20,000",
+      "note": "+ GST"
+    },
+    "international": {
+      "region": "All Other Countries",
+      "amount": "$420",
+      "note": ""
+    }
+  },
+
+  "faq": [
+    {
+      "question": "Do I need my own keyboard?",
+      "answer": "Yes, a 61 or 88-key digital piano/keyboard is recommended for practice."
+    },
+    {
+      "question": "Is this only for beginners?",
+      "answer": "No, even exam-trained students (Grade 4–6) join us for a new, practical perspective."
+    },
+    {
+      "question": "What if I miss a class?",
+      "answer": "Every class is recorded in HD and available to watch later."
+    },
+    {
+      "question": "What age group is this for?",
+      "answer": "We have students from ages 7 to 75+ successfully learning with us."
+    }
+  ],
+
+  "seo": {
+    "title": "Beginner Piano Course in Bangalore | Nathaniel School of Music",
+    "description": "Structured 6-month piano training program combining playing, theory, ear training & rhythm. Learn online, offline, or hybrid. ₹20,000 (+GST) in India, $420 international.",
+    "keywords": "beginner piano course, piano lessons bangalore, online piano lessons, accompaniment skills, solo piano, structured piano training, foundation piano course"
+  },
+
+  "footer": {
+    "logo": "/images/NSM LOGO White_1760966677704.png",
+    "tagline": "Nathaniel School of Music",
+    "description": "Foundation Piano Course - Learn the right way",
+    "contact": {
+      "email": "music@nathanielschool.com",
+      "phone": "+91 77604 56847",
+      "whatsapp": "917760456847"
+    },
+    "links": {
+      "youtube": "https://youtube.com/jasonzac",
+      "instagram": "https://instagram.com/jasonzac",
+      "whatsapp": "https://wa.me/917760456847",
+      "email": "mailto:music@nathanielschool.com",
+      "enrolForm": "https://forms.gle/rrfqJzL5TzoT57Nd6"
+    },
+    "locations": [
+      "Langford Town, Bangalore, India",
+      "Sahakar Nagar, Bangalore, India"
+    ]
+  },
+
+  "instructor": {
+    "name": "Jason Zac",
+    "photo": "/images/Jason Zac (1 of 1)-11_1760966791794.jpg",
+    "bio": "Professional musician and educator with years of experience in blues, gospel, Bollywood, and Indian classical music."
+  }
+}
