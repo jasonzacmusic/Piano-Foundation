@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useABTest } from "@/hooks/use-ab-test";
 import { AB_TESTS, trackABTestConversion } from "@/lib/ab-testing";
 import { trackEnrollmentFormReturn } from "@/lib/analytics";
+import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero-section";
 import { USPSection } from "@/components/sections/usp-section";
 import { SyllabusSection } from "@/components/sections/syllabus-section";
@@ -74,6 +75,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground scroll-smooth">
       <StructuredData />
+      <Header />
       
       <HeroSection 
         data={heroData} 
