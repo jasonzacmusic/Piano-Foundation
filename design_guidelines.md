@@ -1,41 +1,52 @@
 # Design Guidelines: Nathaniel School of Music - Foundation Piano Course Landing Page
 
 ## Design Approach
-**Reference-Based with Educational Landing Page Excellence**
-Drawing inspiration from premium course platforms (MasterClass, Coursera, Skillshare) combined with music industry sophistication. The design prioritizes conversion optimization while maintaining artistic credibility appropriate for a music school.
+**Vintage Piano Conservatory Aesthetic with Modern Landing Page Excellence**
+A warm, rustic design inspired by classic music conservatories and vintage piano studios. Combines nostalgic sepia-toned browns and creams with strategic gold accents. The aesthetic evokes timeless musical tradition while maintaining modern conversion-focused functionality for a premium educational experience.
 
 ## Core Design Principles
 1. **Lead-Focused Architecture**: Every visual element guides toward enrollment
-2. **Professional Credibility**: Design reflects serious musical education, not hobby lessons
-3. **Aspirational Yet Accessible**: Inspire confidence that anyone can learn
+2. **Professional Credibility**: Design reflects serious musical education with historic gravitas
+3. **Aspirational Yet Accessible**: Vintage warmth makes classical education feel approachable
 4. **Trust Through Transparency**: Clear structure, pricing, and outcomes build confidence
 
 ---
 
 ## Color Palette
 
-### Primary Colors (Dark Mode Default)
-- **Background**: 0 0% 7% (rich black, not pure black for sophistication)
-- **Surface**: 0 0% 12% (slightly elevated sections)
-- **Text Primary**: 0 0% 98% (off-white for reduced eye strain)
-- **Text Secondary**: 0 0% 70% (muted for supporting text)
+### Vintage/Rustic Theme (Default)
+**Philosophy**: Warm browns, creams, and sepia tones reminiscent of aged pianos, vintage music halls, and classical conservatories
+
+### Base Colors
+- **Background**: 30 15% 12% (deep warm brown, like aged walnut piano finish)
+- **Card Surface**: 32 18% 16% (slightly lighter warm brown, aged paper feel)
+- **Text Primary**: 40 25% 92% (warm cream, vintage sheet music color)
+- **Text Secondary**: 38 15% 65% (muted sepia for supporting text)
 
 ### Accent Colors
-- **Gold Primary**: 45 85% 60% (warm, prestigious gold for CTAs and highlights)
-- **Gold Hover**: 45 85% 50% (deeper gold for interactive states)
-- **Gold Muted**: 45 30% 35% (subtle gold tints for borders/decorative elements)
+- **Primary Gold**: 42 75% 55% (rich antique gold for CTAs and key highlights)
+- **Muted Gold/Brass**: 38 20% 22% (aged brass patina for subtle accents)
+- **Border Colors**: 30 12-14% 20-22% (warm brown borders maintaining subtle contrast)
 
 ### Semantic Colors
-- **Success**: 142 71% 45% (for trust badges, checkmarks)
-- **Focus/Link**: 45 85% 60% (use gold for consistency)
+- **Success/Check**: 42 75% 55% (use primary gold for consistency)
+- **Focus/Ring**: 42 75% 55% (antique gold for interactive states)
+- **Destructive**: 0 72% 45% (standard red for errors)
+
+### Color Psychology
+This palette creates:
+- **Warmth & Approachability**: Brown tones feel inviting vs. cold blacks
+- **Heritage & Trust**: Vintage aesthetic suggests established tradition
+- **Premium Quality**: Rich wood tones evoke high-end piano craftsmanship
+- **Nostalgic Comfort**: Sepia tones create familiar, comforting atmosphere
 
 ---
 
 ## Typography
 
 ### Font Families
-**Display/Headings**: 'Playfair Display' (Google Fonts) - Elegant serif conveying musical sophistication
-**Body/UI**: 'Inter' (Google Fonts) - Clean, highly legible sans-serif
+**Display/Headings**: 'Playfair Display' (Google Fonts) - Elegant serif conveying musical sophistication and classical education
+**Body/UI**: 'Inter' (Google Fonts) - Clean, highly legible sans-serif for modern readability
 
 ### Type Scale
 - **H1 (Hero)**: text-5xl md:text-6xl lg:text-7xl, font-bold, tracking-tight
@@ -44,7 +55,7 @@ Drawing inspiration from premium course platforms (MasterClass, Coursera, Skills
 - **H4 (Card Titles)**: text-xl md:text-2xl, font-semibold
 - **Body Large**: text-lg md:text-xl, leading-relaxed
 - **Body**: text-base md:text-lg, leading-relaxed
-- **Small/Caption**: text-sm, text-secondary
+- **Small/Caption**: text-sm, text-muted-foreground
 
 ---
 
@@ -63,8 +74,8 @@ Use Tailwind units: **4, 6, 8, 12, 16, 20, 24, 32** for consistent rhythm
 - **Grid layouts**: grid-cols-1 md:grid-cols-2 lg:grid-cols-3 (for USP cards)
 
 ### Section Heights
-- **Hero**: 90vh min-height with content centered, not forced
-- **Content sections**: Natural height with consistent py-24
+- **Hero**: min-h-screen with content centered vertically
+- **Content sections**: Natural height with consistent py-16 to py-32
 - **No arbitrary viewport constraints**: Let content breathe naturally
 
 ---
@@ -72,111 +83,121 @@ Use Tailwind units: **4, 6, 8, 12, 16, 20, 24, 32** for consistent rhythm
 ## Component Library
 
 ### Hero Section
-- Full-width background with overlay (linear gradient from black 70% opacity to transparent)
-- Hero image: Jason at piano (high-quality, professional lighting)
+- Full-width background image (jason-piano-5.jpg or similar teaching/performance photo)
+- Dark warm overlay: linear gradient with brown/black tones (40-60% opacity) for text legibility over images
 - Content: Centered, max-w-4xl
 - Trust badges: Horizontal row with icons, evenly spaced
-- Dual CTA buttons: Primary (gold, filled) + Secondary (gold outline with backdrop-blur)
+- Dual CTA buttons: Primary (gold filled) + Secondary (gold outline with subtle backdrop-blur)
+- Text color: Warm cream (--foreground) to contrast against dark overlay
+
+### Video Section (Course Preview)
+- Embedded inline at top of page (not modal popup)
+- Uses actual YouTube thumbnail image
+- Click opens video in new tab (external link to YouTube)
+- Title + subtitle introducing the demo lesson
+- Card-based layout with warm brown background
 
 ### USP Cards (7 cards in responsive grid)
-- Card style: Subtle border (gold-muted), dark surface background, p-6 to p-8
-- Icon: lucide-react icons in gold, size-10 md:size-12
-- Title: H4 styling in white
-- Description: Body text in text-secondary
-- Hover: Subtle scale transform (1.02) and gold border brightening
+- Card style: Warm brown card background (bg-card), subtle border in card-border color
+- Icon: lucide-react icons in primary gold, w-12 h-12 in rounded background
+- Title: H4 styling in warm cream foreground
+- Description: Body text in muted-foreground (sepia tone)
+- Hover: hover-elevate utility for subtle interaction
 - Grid: 1 column mobile, 2 columns tablet, 3 columns desktop
 
-### Syllabus/What You'll Learn (4-column grid)
-- Section headers with gold accent underline
-- Bullet lists with custom gold checkmark icons
-- Cards with subtle left border in gold
+### Syllabus/What You'll Learn (4 sections, 2x2 grid)
+- Section headers with gold accent icons
+- Bullet lists with CheckCircle icons in primary gold
+- Cards with left border accent (border-l-4 border-l-primary) - **NOTE**: This violates rounded corners rule if cards are rounded. Consider removing or using full border.
 - Grid: 1 column mobile, 2 columns desktop
 
-### Course Structure Timeline
-- Vertical timeline design with gold connecting line
-- Icon bullets for each milestone
-- Mixed text + numeric highlights (32+ hours, 20 classes, etc.)
+### Course Structure
+- Clean text-based layout with key stats (32+ hours, 20 classes, etc.)
+- May include timeline or icon-based milestone layout
+- Uses cards or simple text blocks with warm brown backgrounds
 
-### Testimonial Cards
-- 2-card horizontal layout (stacked on mobile)
-- Student photo: Circular, border with gold ring
-- Quote in large italic text
-- Name and role below in smaller text
-- Background: Slightly elevated surface color
+### Who It's For (5 learner types)
+- Card-based grid layout
+- Centered text with warm brown card backgrounds
+- Title + description format
+- Grid: 1-2-3 column responsive layout
+
+### Testimonial Carousel (6 testimonials)
+- Embla Carousel implementation for interactive sliding
+- Student photos using actual Jason/course images as placeholders
+- Quote in italic text with warm cream color
+- Name and role below in smaller muted text
+- Card backgrounds in warm brown tones
 
 ### Fee Display Section
-- Large, prominent pricing with currency dynamically shown
-- Two-column layout: Pricing left, CTA buttons right (stacked on mobile)
-- GST note in smaller text below price
-- Gold accent border around pricing box
+- Large, prominent pricing with geo-targeted currency (₹ for domestic, $ international)
+- Clear presentation with GST notes
+- CTA buttons for enrollment
+- Warm brown card background with subtle gold accent borders
 
 ### FAQ Accordion
-- Radix UI accordion or shadcn/ui accordion component
+- shadcn/ui accordion component
 - Gold chevron icons for expand/collapse
 - Question in semibold, answer in regular weight
-- Subtle dividers between items
+- Warm brown backgrounds with subtle dividers
 - Smooth height animation on expand
-
-### Sticky Mobile CTA
-- Fixed bottom button on mobile viewports (< md breakpoint)
-- Full-width gold button with emoji + "Enrol Now"
-- Subtle shadow for elevation
-- z-50 to stay above content
 
 ### Footer
 - 3-column layout: Logo/tagline, Quick Links, Contact Info (stacked on mobile)
-- Social icons in gold with hover effects
+- NSM White logo for visibility on dark brown background
+- Social icons with hover effects
 - Copyright and location in smaller text
-- Dark surface background slightly different from page background
+- Warm brown background slightly different from page background
 
 ---
 
-## Images
+## Images & Visual Treatment
 
 ### Primary Images (User-Provided)
-1. **Hero**: Jason at piano (060A0073.JPG or Live with Melodica.jpg) - Full-width background with overlay
-2. **About/Bio Section**: Headshot (Jason Zac portrait images) - Circular or rounded square, right-aligned with text wrap
-3. **Teaching Scene**: Classroom/teaching photos for social proof section
-4. **Performance**: Stage performance image for credibility/aspirational content
+All images stored in `client/public/images/`:
+1. **Hero Background**: jason-piano-5.jpg - Full-width with warm dark overlay
+2. **NSM Logo**: nsm-logo-main.png (NSM White logo) - Header and footer
+3. **Instructor/Student Photos**: jason-piano-1 through 6, jason-zac.jpg, etc.
+4. **Performance/Teaching**: live-performance.jpg, live-melodica.jpg for social proof
 
 ### Image Treatment
-- Hero: Dark overlay (40-60% opacity black gradient) for text legibility
+- Hero: Dark warm overlay (brown-tinted black gradient, 40-60% opacity) for text legibility
 - All images: Subtle rounded corners (rounded-lg to rounded-xl)
-- Aspect ratios: Maintain 16:9 for landscape, 4:5 for portraits
-- Loading: Use Next.js Image component with blur placeholder
+- Aspect ratios: Maintain 16:9 for landscape, 1:1 or 4:5 for portraits
+- Color tone: Photos should feel warm; may apply sepia CSS filters if needed for cohesion
+
+### Photo Usage in Sections
+- **Hero**: jason-piano-5.jpg as full-width background
+- **Video Preview**: YouTube thumbnail embedded inline (top of page)
+- **Testimonials**: Various jason-piano-X.jpg images as placeholder student photos
+- **About/Bio**: jason-zac.jpg or portrait shots for instructor credibility
 
 ---
 
-## Animations (Framer Motion - Minimal)
-
-### Hero Entrance
-- Fade in + slight upward motion for headline and subheadline
-- Stagger children for CTA buttons (0.1s delay)
-- Duration: 0.6s with ease-out
+## Animations (Framer Motion - Minimal & Subtle)
 
 ### Scroll-Triggered Reveals
-- USP cards: Fade in + slight upward motion, staggered by 0.05s
-- Testimonials: Slide in from sides (left/right alternating)
-- Stats/numbers: Count-up animation on scroll into view
+- USP cards: Fade in + slight upward motion (y: 20 → 0), staggered by 0.05s
+- Sections: Fade in on scroll into viewport with `whileInView`
+- Duration: 0.5-0.6s with ease-out
 
 ### Interactive States
-- Button hover: Scale 1.05 + brightness increase
-- Card hover: Subtle lift (translateY -2px) + shadow increase
+- Button hover: Use built-in hover-elevate class (subtle background brightening)
+- Card hover: hover-elevate for subtle lift effect
 - Link hover: Color transition to brighter gold
 
-**Critical**: Animations should enhance, not distract. All animations < 0.6s duration.
+**Critical**: Animations enhance, never distract. All animations < 0.6s duration. Use `viewport={{ once: true }}` to prevent re-triggering.
 
 ---
 
 ## Accessibility & Best Practices
 
 - All images have descriptive alt text
-- Form inputs have proper labels and ARIA attributes
-- Color contrast ratios meet WCAG AA standards (gold on dark passes, verified)
-- Focus states visible with gold outline ring
-- Keyboard navigation fully supported for accordion, forms
-- Semantic HTML5 elements (header, nav, main, section, footer)
-- Skip-to-content link for screen readers
+- Form inputs have proper labels and data-testid attributes
+- Color contrast ratios meet WCAG AA standards (cream on dark brown passes)
+- Focus states visible with gold outline ring (--ring color)
+- Keyboard navigation fully supported
+- Semantic HTML5 elements (header, main, section, footer)
 
 ---
 
@@ -191,9 +212,9 @@ Use Tailwind units: **4, 6, 8, 12, 16, 20, 24, 32** for consistent rhythm
 ### Key Responsive Adjustments
 - Hero headline: Smaller on mobile (text-4xl) → larger on desktop (text-7xl)
 - Grid columns: 1 → 2 → 3 progression
-- Padding: Tighter on mobile (px-4, py-12) → spacious on desktop (px-8, py-24)
-- Sticky CTA: Only visible on mobile (hidden md:hidden)
+- Padding: Tighter on mobile (px-4, py-12) → spacious on desktop (px-8, py-32)
 - Typography: Body text 16px mobile minimum for readability
+- Video: Responsive iframe sizing
 
 ---
 
@@ -201,35 +222,53 @@ Use Tailwind units: **4, 6, 8, 12, 16, 20, 24, 32** for consistent rhythm
 
 ### Visual Hierarchy for CTAs
 1. Primary CTA (Enrol Now): Gold filled button, largest size, prominent placement
-2. Secondary CTA (WhatsApp/Email): Gold outline buttons, slightly smaller
-3. Tertiary actions (Watch Video): Link styling with icon
+2. Secondary CTAs (WhatsApp/Email): Gold outline buttons
+3. Tertiary actions: Link styling with icons
 
 ### Trust Indicators
-- Icon row under hero (Live Online, Certificate, etc.)
-- Testimonial photos and names
+- Icon row under hero (Live Online, Certificate, Hybrid modes)
+- Testimonial photos and names (6 reviews in carousel)
 - Graded certificate badge/icon
-- "Trusted by X students" if applicable
-- Location and contact prominence in footer
-
-### Scarcity/Urgency (Subtle)
-- "Limited seats" if applicable (in JSON for easy toggle)
-- "Next batch starts [date]" - updatable via JSON
+- Course structure transparency (32+ hours, 20 classes detailed breakdown)
+- Footer contact prominence (WhatsApp, email, location)
 
 ---
 
 ## Technical Implementation Notes
 
 ### Performance
-- Optimize images: WebP format with fallbacks, responsive srcsets
-- Lazy load below-the-fold images
-- Preload hero image for instant display
-- Minimize JavaScript: Only Framer Motion for critical animations
+- All images served from `client/public/images/` via Vite static asset serving
+- Images referenced as `/images/filename.jpg` (absolute path from public root)
+- YouTube video uses external embed (not hosted locally)
+- Lazy load below-fold images where possible
 
 ### SEO Optimization
-- Structured data (JSON-LD): Course schema, Organization schema
 - Meta tags from landing.json seo section
 - Semantic HTML with proper heading hierarchy
 - Descriptive page title and meta description
-- Open Graph and Twitter Card tags for social sharing
+- Open Graph tags for social sharing
+- Google Analytics integration with event tracking
 
-This design balances professional credibility with conversion-focused layout, ensuring every element serves the goal of generating enrollments while maintaining the artistic sophistication expected of a music school.
+### Content Management
+- All text content in `content/landing.json` for non-technical team updates
+- Image paths in JSON point to `client/public/images/`
+- Team can replace images by uploading to `client/public/images/` directory
+- No code changes needed for content updates
+
+---
+
+## Design Rationale: Why Vintage/Rustic?
+
+**Market Differentiation**: Most music course landing pages use modern dark mode with blues/purples or bright whites. The vintage brown aesthetic:
+- Stands out visually in a sea of modern designs
+- Evokes trust through "timeless tradition" rather than "new startup"
+- Appeals to classical music heritage while remaining approachable
+- Creates emotional warmth that modern minimalism lacks
+- Signals "established institution" not "online course marketplace"
+
+**Target Audience Alignment**: Piano students often value:
+- Traditional craftsmanship (warm wood tones evoke quality pianos)
+- Heritage and proven methods (vintage aesthetic suggests established curriculum)
+- Comfort and approachability (warm browns feel inviting, not intimidating)
+
+This design balances heritage credibility with conversion-focused layout, ensuring every element serves enrollment goals while maintaining the artistic sophistication expected of a music conservatory.
