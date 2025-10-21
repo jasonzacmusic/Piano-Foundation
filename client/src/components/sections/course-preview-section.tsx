@@ -16,9 +16,18 @@ interface CoursePreviewProps {
 export function CoursePreviewSection({ data }: CoursePreviewProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const getVideoId = (url: string) => {
+    return url.split("v=")[1]?.split("&")[0] || url.split("/").pop();
+  };
+
   const getYouTubeEmbedUrl = (url: string) => {
-    const videoId = url.split("v=")[1]?.split("&")[0] || url.split("/").pop();
+    const videoId = getVideoId(url);
     return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  };
+
+  const getYouTubeThumbnail = (url: string) => {
+    const videoId = getVideoId(url);
+    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
   };
 
   const handlePlayClick = () => {
@@ -55,16 +64,20 @@ export function CoursePreviewSection({ data }: CoursePreviewProps) {
             <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-muted">
               {!isPlaying ? (
                 <div 
-                  className="absolute inset-0 flex items-center justify-center cursor-pointer group"
+                  className="absolute inset-0 cursor-pointer group"
                   onClick={handlePlayClick}
                   data-testid="button-preview-play"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
-                  <div className="relative z-10 flex flex-col items-center gap-4">
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <img
+                    src={getYouTubeThumbnail(data.videoUrl)}
+                    alt="Video Preview"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/40" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
                       <Play className="w-10 h-10 md:w-12 md:h-12 text-primary-foreground ml-1" />
                     </div>
-                    <p className="text-lg md:text-xl font-semibold">Watch Demo Lesson</p>
                   </div>
                 </div>
               ) : (
