@@ -16,12 +16,10 @@ import { FAQSection } from "@/components/sections/faq-section";
 import { SEOSection } from "@/components/sections/seo-section";
 import { Footer } from "@/components/sections/footer";
 import { StickyCTA } from "@/components/sticky-cta";
-import { VideoModal } from "@/components/video-modal";
 import { StructuredData } from "@/components/structured-data";
 import landingData from "../../../content/landing.json";
 
 export default function Home() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [userRegion, setUserRegion] = useState<"domestic" | "international">("international");
 
   // A/B Testing
@@ -79,7 +77,6 @@ export default function Home() {
       
       <HeroSection 
         data={heroData} 
-        onVideoClick={() => setIsVideoOpen(true)}
         onEnrollClick={handleEnrollmentClick}
       />
       
@@ -107,12 +104,6 @@ export default function Home() {
       <Footer data={landingData.footer} />
       
       <StickyCTA enrollLink={landingData.hero.buttons.primary.link} />
-      
-      <VideoModal 
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        videoUrl={landingData.hero.buttons.secondary.link}
-      />
     </div>
   );
 }
