@@ -80,13 +80,13 @@ export default function Home() {
         onEnrollClick={handleEnrollmentClick}
       />
       
+      <CoursePreviewSection data={landingData.coursePreview} />
+      
       <USPSection data={landingData.usps} />
       
       <SyllabusSection data={landingData.syllabus} />
       
       <CourseStructureSection data={landingData.structure} />
-      
-      <CoursePreviewSection data={landingData.coursePreview} />
       
       <WhoIsForSection data={landingData.whoIsFor} />
       
