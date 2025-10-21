@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Play, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import { trackEnrollmentClick, trackVideoPlay, trackEnrollmentFormOpened } from "@/lib/analytics";
+import { trackEnrollmentClick, trackEnrollmentFormOpened } from "@/lib/analytics";
 
 interface HeroProps {
   data: {
@@ -14,11 +14,10 @@ interface HeroProps {
     trust: string[];
     heroImage: string;
   };
-  onVideoClick: () => void;
   onEnrollClick?: () => void;
 }
 
-export function HeroSection({ data, onVideoClick, onEnrollClick }: HeroProps) {
+export function HeroSection({ data, onEnrollClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
@@ -72,20 +71,6 @@ export function HeroSection({ data, onVideoClick, onEnrollClick }: HeroProps) {
               data-testid="button-enrol-hero"
             >
               {data.buttons.primary.text}
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base md:text-lg px-8 py-6 min-h-14 backdrop-blur-sm bg-background/10"
-              onClick={() => {
-                trackVideoPlay('hero_explainer_video');
-                onVideoClick();
-              }}
-              data-testid="button-video-hero"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              {data.buttons.secondary.text}
             </Button>
           </motion.div>
 
