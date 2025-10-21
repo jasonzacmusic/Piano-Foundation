@@ -5,18 +5,10 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-3">
             <img
-              src="/images/nsm-logo-white.png"
+              src="/images/nsm-logo-main.png"
               alt="Nathaniel School of Music"
-              className="h-10 md:h-12"
+              className="h-12 md:h-14"
             />
-            <div className="hidden sm:block">
-              <h1 className="font-serif text-lg md:text-xl font-bold">
-                Nathaniel School of Music
-              </h1>
-              <p className="text-xs text-muted-foreground">
-                Foundation Piano Course
-              </p>
-            </div>
           </div>
         </div>
       </div>
