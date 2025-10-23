@@ -2,11 +2,13 @@ export function StudentPhotosSection() {
   const photos = [
     {
       src: "/images/student-playing-1.jpg",
-      alt: "Student performing at piano"
+      alt: "Student performing at piano",
+      position: "center 20%"
     },
     {
       src: "/images/student-playing-2.jpg",
-      alt: "Student learning piano in class"
+      alt: "Student learning piano in class",
+      position: "center 35%"
     }
   ];
 
@@ -35,6 +37,7 @@ export function StudentPhotosSection() {
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 style={{
                   filter: "sepia(0.25) brightness(0.9) contrast(1.1) saturate(0.9)",
+                  objectPosition: photo.position,
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
