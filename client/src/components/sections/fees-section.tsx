@@ -26,9 +26,9 @@ export function FeesSection({ data, userRegion }: FeesSectionProps) {
   const isDomestic = userRegion === "domestic";
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-card/30">
+    <section className="py-12 md:py-16 lg:py-20 bg-card/30">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        <div className="text-center mb-12 md:mb-16 space-y-4">
+        <div className="text-center mb-8 md:mb-12 space-y-4">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Course Fees
           </h2>
