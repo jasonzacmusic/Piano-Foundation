@@ -126,7 +126,7 @@ Preferred communication style: Simple, everyday language.
 2. **WhatsApp**: Click-to-chat integration with phone number +91 77604 56847
 3. **Email**: `music@nathanielschool.com` for direct contact
 4. **Video Hosting**: YouTube for explainer video embeds
-5. **Social Media**: YouTube (`youtube.com/jasonzac`) and Instagram (`instagram.com/jasonzac`)
+5. **Social Media**: YouTube (`youtube.com/channel/UCCI37YB3l21oq_sLoc92YfA`), Instagram (`instagram.com/jasonzac`), and Patreon (`patreon.com/jasonzac`)
 6. **IP Geolocation**: ip-api.com (primary) and ipapi.co (backup) for country detection
 
 **Fonts**

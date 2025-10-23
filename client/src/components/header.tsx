@@ -50,7 +50,7 @@ export function Header() {
               size="icon"
               variant="outline"
               className="w-12 h-12 md:w-14 md:h-14 border-primary/30 hover:bg-primary/10 hover:border-primary"
-              onClick={() => window.open('https://youtube.com/jasonzac', '_blank')}
+              onClick={() => window.open('https://www.youtube.com/channel/UCCI37YB3l21oq_sLoc92YfA?sub_confirmation=1', '_blank')}
               data-testid="button-youtube-header"
             >
               <Youtube className="w-5 h-5 md:w-6 md:h-6 text-primary" />

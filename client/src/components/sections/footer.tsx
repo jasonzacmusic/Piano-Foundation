@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Youtube, Instagram, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Youtube, Instagram, MessageCircle, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackEnrollmentClick, trackWhatsAppClick, trackEmailClick, trackEnrollmentFormOpened } from "@/lib/analytics";
 
@@ -14,6 +14,7 @@ interface FooterData {
   links: {
     youtube: string;
     instagram: string;
+    patreon?: string;
     whatsapp: string;
     email: string;
     enrolForm: string;
@@ -64,6 +65,17 @@ export function Footer({ data }: FooterProps) {
                 <Instagram className="w-4 h-4 mr-2" />
                 Instagram
               </Button>
+              {data.links.patreon && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => window.open(data.links.patreon, '_blank')}
+                  data-testid="button-patreon-footer"
+                >
+                  <Heart className="w-4 h-4 mr-2" />
+                  Support on Patreon
+                </Button>
+              )}
               <Button
                 variant="outline"
                 size="sm"
