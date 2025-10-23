@@ -1,9 +1,27 @@
-import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 export function InstagramReelsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load Instagram embed script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = '//www.instagram.com/embed.js';
+    document.body.appendChild(script);
+
+    // Process embeds when script loads
+    script.onload = () => {
+      if ((window as any).instgrm) {
+        (window as any).instgrm.Embeds.process();
+      }
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -27,21 +45,6 @@ export function InstagramReelsSection() {
   return (
     <section className="py-8 md:py-12 lg:py-16 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-6 md:mb-8"
-        >
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3">
-            Student Performances & Highlights
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground">
-            Watch our students in action
-          </p>
-        </motion.div>
-
         <div className="relative">
           <button
             onClick={() => scroll("left")}
@@ -58,26 +61,28 @@ export function InstagramReelsSection() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {reelUrls.map((url, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="flex-shrink-0 snap-center"
               >
-                <iframe
-                  src={`${url}embed/`}
-                  width="320"
-                  height="570"
-                  frameBorder="0"
-                  scrolling="no"
-                  allowTransparency
-                  allow="encrypted-media"
-                  className="rounded-lg shadow-lg"
-                  data-testid={`iframe-reel-${index}`}
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-permalink={url}
+                  data-instgrm-version="14"
+                  style={{
+                    background: '#FFF',
+                    border: 0,
+                    borderRadius: '3px',
+                    boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
+                    margin: '1px',
+                    maxWidth: '540px',
+                    minWidth: '326px',
+                    padding: 0,
+                    width: 'calc(100% - 2px)',
+                  }}
+                  data-testid={`blockquote-reel-${index}`}
                 />
-              </motion.div>
+              </div>
             ))}
           </div>
 
