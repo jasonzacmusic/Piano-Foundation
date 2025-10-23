@@ -32,6 +32,14 @@ export default function Home() {
   });
 
   useEffect(() => {
+    // Check for test override first (for team testing)
+    const testRegion = localStorage.getItem('test_region');
+    if (testRegion === 'domestic' || testRegion === 'international') {
+      setUserRegion(testRegion);
+      return;
+    }
+    
+    // Use actual geo-detection
     if (geoData?.region) {
       setUserRegion(geoData.region);
     }

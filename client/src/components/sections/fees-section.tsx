@@ -53,15 +53,8 @@ export function FeesSection({ data, userRegion }: FeesSectionProps) {
                   ) : (
                     <DollarSign className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                   )}
-                  <div>
-                    <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold">
-                      {currentFee.amount}
-                    </div>
-                    {currentFee.note && (
-                      <div className="text-sm md:text-base text-muted-foreground mt-1">
-                        {currentFee.note}
-                      </div>
-                    )}
+                  <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold">
+                    {isDomestic ? currentFee.amount : `${currentFee.amount}$`}
                   </div>
                 </div>
                 

@@ -200,12 +200,12 @@
   "fees": {
     "domestic": {
       "region": ["India", "Nepal", "Sri Lanka", "Bangladesh", "Pakistan", "Bhutan", "Maldives"],
-      "amount": "₹20,000",
-      "note": "+ GST"
+      "amount": "Rs.20000 (+GST)",
+      "note": ""
     },
     "international": {
       "region": "All Other Countries",
-      "amount": "$420",
+      "amount": "420",
       "note": ""
     }
   },
