@@ -21,7 +21,7 @@ import { StructuredData } from "@/components/structured-data";
 import landingData from "../../../content/landing.json";
 
 export default function Home() {
-  const [userRegion, setUserRegion] = useState<"domestic" | "international">("international");
+  const [userRegion, setUserRegion] = useState<"domestic" | "international" | null>(null);
 
   // A/B Testing
   const heroHeadlineTest = useABTest(AB_TESTS.HERO_HEADLINE);
@@ -42,6 +42,9 @@ export default function Home() {
     // Use actual geo-detection
     if (geoData?.region) {
       setUserRegion(geoData.region);
+    } else {
+      // Default to international while loading
+      setUserRegion("international");
     }
   }, [geoData]);
 
@@ -105,7 +108,7 @@ export default function Home() {
       
       <FeesSection 
         data={landingData.fees} 
-        userRegion={userRegion}
+        userRegion={userRegion || "international"}
       />
       
       <FAQSection data={landingData.faq} />

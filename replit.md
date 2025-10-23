@@ -12,6 +12,17 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**October 23, 2025 - Student Photo Highlights & Geo-Pricing Fix**
+- Added 158 unique course highlights to student photos section
+  - Dynamic randomization on hover (desktop) or always visible (mobile)
+  - Smart pool management ensures no repeats across all photos
+  - Categories: USPs, testimonials, piano skills, theory, ear training, rhythm, performance, etc.
+- Fixed critical geo-pricing bug for international users
+  - Implemented IP-based geolocation using ip-api.com (with ipapi.co fallback)
+  - Now correctly detects USA, Canada, Australia, Europe, UAE, Middle East, etc.
+  - Defaults to international pricing on API failure (safer for conversion)
+  - Testing: Use `localStorage.setItem('test_region', 'domestic'/'international')` + reload
+
 **October 23, 2025 - Vintage Design Update & Image Management**
 - Updated color scheme from modern dark mode to vintage/rustic piano conservatory aesthetic
 - Color palette: Warm browns (30° hue), creams, and antique gold tones (42° hue)
@@ -76,9 +87,12 @@ Preferred communication style: Simple, everyday language.
 
 **API Endpoints**
 - `/api/geo`: Geolocation detection for regional pricing (returns "domestic" or "international" based on visitor's country)
-  - Checks headers: `x-vercel-ip-country` or `cf-ipcountry`
-  - Domestic countries: India, Nepal, Sri Lanka, Bangladesh, Pakistan, Bhutan, Maldives
-  - Determines pricing display (₹20,000 + GST vs $420)
+  - First checks CDN headers: `x-vercel-ip-country`, `cf-ipcountry`, `x-replit-user-ip-country`
+  - If headers unavailable (Replit), extracts client IP from `x-forwarded-for` and uses IP geolocation API
+  - Uses ip-api.com (free, no key, 45 req/min) with ipapi.co as backup
+  - Domestic countries: India, Nepal, Sri Lanka, Bangladesh, Pakistan, Bhutan, Maldives (₹20,000 + GST)
+  - International: All other countries ($420)
+  - Defaults to international pricing on API failure (safer for conversion)
 
 **Content Management**
 - JSON-based content system (`/content/landing.json`) for non-technical content updates
@@ -113,6 +127,7 @@ Preferred communication style: Simple, everyday language.
 3. **Email**: `music@nathanielschool.com` for direct contact
 4. **Video Hosting**: YouTube for explainer video embeds
 5. **Social Media**: YouTube (`youtube.com/jasonzac`) and Instagram (`instagram.com/jasonzac`)
+6. **IP Geolocation**: ip-api.com (primary) and ipapi.co (backup) for country detection
 
 **Fonts**
 - Google Fonts: Playfair Display and Inter loaded via CDN
