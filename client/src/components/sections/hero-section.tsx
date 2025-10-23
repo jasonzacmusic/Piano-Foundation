@@ -20,8 +20,20 @@ interface HeroProps {
 
 export function HeroSection({ data, onEnrollClick }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url(/images/hero-background.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "sepia(0.3) brightness(0.7) contrast(1.05) saturate(0.85)",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/75 to-background/85" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
