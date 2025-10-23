@@ -12,6 +12,26 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**October 23, 2025 - Social Media Sharing & Favicon**
+- Added professional social media preview image (1200x630px) for elegant sharing on Instagram, Facebook, X, LinkedIn, WhatsApp, etc.
+- Set NSM logo as favicon (square logo)
+- Comprehensive Open Graph meta tags for optimal social media previews
+- Twitter Card meta tags for X (Twitter) platform
+- Image dimensions and alt text for accessibility
+- Absolute URLs for proper social media crawling
+
+**October 23, 2025 - WhatsApp/Mobile Field Enhancement**
+- Changed "WhatsApp Number" label to "WhatsApp / Mobile"
+- Expanded country code selector to 15 prominent codes (India, USA, UK, UAE, Singapore, Australia, Malaysia, China, Germany, France, Italy, Japan, South Korea, Spain, Mexico)
+- Added "🌍 Other" option allowing custom country code entry for any country worldwide
+- Reset button to return to dropdown from custom entry
+
+**October 23, 2025 - Header & SEO Updates**
+- Added descriptive labels under header icons: "WhatsApp", "Call Us", "Music Tips", "Free Tutorials"
+- Instagram link updated to instagram.com/jasonzac (was nathanielschool)
+- Reformatted SEO section text for better readability
+- Removed Instagram reels section (platform doesn't support reliable inline embedding)
+
 **October 23, 2025 - Student Photo Highlights & Geo-Pricing Fix**
 - Added 158 unique course highlights to student photos section
   - Dynamic randomization on hover (desktop) or always visible (mobile)
