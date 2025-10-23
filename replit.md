@@ -13,12 +13,13 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 **October 23, 2025 - Social Media Sharing & Favicon**
-- Added professional social media preview image (1200x630px) for elegant sharing on Instagram, Facebook, X, LinkedIn, WhatsApp, etc.
+- Updated social preview to use NSM logo (white version on dark background)
+- Generalized social media content (removed instructor-specific mentions)
+- Improved titles and descriptions for better click-through rates
 - Set NSM logo as favicon (square logo)
-- Comprehensive Open Graph meta tags for optimal social media previews
-- Twitter Card meta tags for X (Twitter) platform
-- Image dimensions and alt text for accessibility
-- Absolute URLs for proper social media crawling
+- Comprehensive Open Graph meta tags for Facebook, Instagram, LinkedIn, WhatsApp
+- Twitter Card meta tags for X platform
+- Proper image format (PNG) with dimensions for reliable social media display
 
 **October 23, 2025 - WhatsApp/Mobile Field Enhancement**
 - Changed "WhatsApp Number" label to "WhatsApp / Mobile"
