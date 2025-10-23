@@ -137,24 +137,34 @@
 
   "whoIsFor": [
     {
+      "emoji": "🎹",
       "title": "Absolute Beginners",
       "description": "Start your musical journey with confidence"
     },
     {
+      "emoji": "🎵",
       "title": "Hobbyists",
       "description": "Turn your passion into performance"
     },
     {
+      "emoji": "🎧",
       "title": "Producers & DJs",
       "description": "Add live piano skills to your productions"
     },
     {
+      "emoji": "✍️",
       "title": "Songwriters",
       "description": "Compose with deeper musical knowledge"
     },
     {
+      "emoji": "📚",
       "title": "Classical Learners",
       "description": "Trinity/ABRSM students seeking practical skills"
+    },
+    {
+      "emoji": "🎓",
+      "title": "Aspiring Teachers",
+      "description": "Build the foundation to guide and inspire future students confidently"
     }
   ],
 

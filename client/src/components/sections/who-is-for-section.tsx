@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 interface WhoIsForItem {
+  emoji: string;
   title: string;
   description: string;
 }
@@ -36,6 +37,9 @@ export function WhoIsForSection({ data }: WhoIsForSectionProps) {
                 className="p-6 md:p-8 text-center hover-elevate transition-all h-full"
                 data-testid={`card-who-${index}`}
               >
+                <div className="text-4xl md:text-5xl mb-4">
+                  {item.emoji}
+                </div>
                 <h3 className="font-serif text-xl md:text-2xl font-semibold mb-3">
                   {item.title}
                 </h3>
