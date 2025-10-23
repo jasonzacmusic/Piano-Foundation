@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Phone, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { trackEnrollmentClick, trackEnrollmentFormOpened } from "@/lib/analytics";
 
@@ -19,19 +19,37 @@ interface HeroProps {
 
 export function HeroSection({ data, onEnrollClick }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${data.heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/70" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center bg-background">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-24">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12"
+        >
+          <Button
+            size="lg"
+            variant="default"
+            className="text-base px-6 py-6 min-h-12 w-full sm:w-auto"
+            onClick={() => window.open('https://wa.me/917760456847', '_blank')}
+            data-testid="button-whatsapp-hero"
+          >
+            <MessageCircle className="w-5 h-5 mr-2" />
+            WhatsApp: +91 77604 56847
+          </Button>
+          
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-base px-6 py-6 min-h-12 w-full sm:w-auto"
+            onClick={() => window.location.href = 'tel:+917760456847'}
+            data-testid="button-phone-hero"
+          >
+            <Phone className="w-5 h-5 mr-2" />
+            Call: +91 77604 56847
+          </Button>
+        </motion.div>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
