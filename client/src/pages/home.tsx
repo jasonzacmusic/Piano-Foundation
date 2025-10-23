@@ -110,8 +110,6 @@ export default function Home() {
       
       <TestimonialsSection data={landingData.testimonials} />
       
-      <InstagramReelsSection />
-      
       <FeesSection 
         data={landingData.fees} 
         userRegion={userRegion || "international"}
