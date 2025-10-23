@@ -18,7 +18,7 @@
       "Graded Certificate",
       "Assignments & Feedback"
     ],
-    "heroImage": "/images/jason-piano-5.jpg"
+    "heroImage": "/images/060A0073.jpg"
   },
 
   "usps": [
@@ -153,37 +153,37 @@
       "quote": "I joined as a complete beginner and performed my first live show in 6 months!",
       "name": "Aarushi",
       "role": "Student",
-      "photo": "/images/jason-piano-1.jpg"
+      "photo": "/images/student-1.jpg"
     },
     {
       "quote": "This course gave me a solid foundation and made piano fun. I now use it in my own songs.",
       "name": "Geeth",
       "role": "Producer",
-      "photo": "/images/jason-piano-3.jpg"
+      "photo": "/images/student-2.jpg"
     },
     {
       "quote": "The bottom-up approach changed everything for me. I can now accompany singers in any key!",
       "name": "Priya Sharma",
       "role": "Accompanist",
-      "photo": "/images/jason-piano-4.jpg"
+      "photo": "/images/student-3.jpg"
     },
     {
       "quote": "As a 68-year-old beginner, I was nervous. But the teaching style made it so approachable and fun!",
       "name": "Ramesh Kumar",
       "role": "Hobbyist",
-      "photo": "/images/jason-piano-1.jpg"
+      "photo": "/images/student-4.jpg"
     },
     {
       "quote": "After years of classical training, this course opened my eyes to practical musicianship. Game changer!",
       "name": "Meera Iyer",
       "role": "Classical Pianist",
-      "photo": "/images/jason-piano-3.jpg"
+      "photo": "/images/student-5.jpg"
     },
     {
       "quote": "The ear training and rhythm modules were incredible. I can now play by ear and improvise confidently.",
       "name": "Arjun Desai",
       "role": "Songwriter",
-      "photo": "/images/jason-piano-4.jpg"
+      "photo": "/images/student-6.jpg"
     }
   ],
 
@@ -249,7 +249,7 @@
 
   "instructor": {
     "name": "Jason Zac",
-    "photo": "/images/jason-piano-2.jpg",
+    "photo": "/images/jason-riffs.jpg",
     "bio": "Professional musician and educator with years of experience in blues, gospel, Bollywood, and Indian classical music."
   }
 }
