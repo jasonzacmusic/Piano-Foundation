@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PianoDivider } from "@/components/sections/piano-divider";
 import { USPSection } from "@/components/sections/usp-section";
+import { StudentPhotosSection } from "@/components/sections/student-photos-section";
 import { SyllabusSection } from "@/components/sections/syllabus-section";
 import { CourseStructureSection } from "@/components/sections/course-structure-section";
 import { CoursePreviewSection } from "@/components/sections/course-preview-section";
@@ -86,6 +87,8 @@ export default function Home() {
       <CoursePreviewSection data={landingData.coursePreview} />
       
       <USPSection data={landingData.usps} />
+      
+      <StudentPhotosSection />
       
       <SyllabusSection data={landingData.syllabus} />
       
