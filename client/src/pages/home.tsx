@@ -27,7 +27,7 @@ export default function Home() {
   const heroHeadlineTest = useABTest(AB_TESTS.HERO_HEADLINE);
   const primaryCTATest = useABTest(AB_TESTS.PRIMARY_CTA);
 
-  const { data: geoData } = useQuery({
+  const { data: geoData } = useQuery<{ country: string; region: "domestic" | "international" }>({
     queryKey: ["/api/geo"],
   });
 
