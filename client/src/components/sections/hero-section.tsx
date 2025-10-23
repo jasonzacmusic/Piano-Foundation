@@ -22,49 +22,6 @@ export function HeroSection({ data, onEnrollClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-24">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex gap-4 justify-center items-center mb-12"
-        >
-          <Button
-            size="icon"
-            className="w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] text-white border-0"
-            onClick={() => window.open('https://wa.me/917760456847', '_blank')}
-            data-testid="button-whatsapp-hero"
-          >
-            <SiWhatsapp className="w-7 h-7" />
-          </Button>
-          
-          <Button
-            size="icon"
-            className="w-14 h-14 bg-primary hover:bg-primary/90 text-primary-foreground"
-            onClick={() => window.location.href = 'tel:+917760456847'}
-            data-testid="button-phone-hero"
-          >
-            <Phone className="w-7 h-7" />
-          </Button>
-
-          <Button
-            size="icon"
-            className="w-14 h-14 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:opacity-90 text-white border-0"
-            onClick={() => window.open('https://instagram.com/jasonzac', '_blank')}
-            data-testid="button-instagram-hero"
-          >
-            <Instagram className="w-7 h-7" />
-          </Button>
-
-          <Button
-            size="icon"
-            className="w-14 h-14 bg-[#FF0000] hover:bg-[#CC0000] text-white border-0"
-            onClick={() => window.open('https://youtube.com/jasonzac', '_blank')}
-            data-testid="button-youtube-hero"
-          >
-            <Youtube className="w-7 h-7" />
-          </Button>
-        </motion.div>
-
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
