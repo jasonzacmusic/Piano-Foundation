@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Phone, MessageCircle } from "lucide-react";
+import { CheckCircle, Phone, Instagram, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 import { trackEnrollmentClick, trackEnrollmentFormOpened } from "@/lib/analytics";
+import { SiWhatsapp } from "react-icons/si";
 
 interface HeroProps {
   data: {
@@ -25,28 +26,42 @@ export function HeroSection({ data, onEnrollClick }: HeroProps) {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12"
+          className="flex gap-4 justify-center items-center mb-12"
         >
           <Button
-            size="lg"
-            variant="default"
-            className="text-base px-6 py-6 min-h-12 w-full sm:w-auto"
+            size="icon"
+            className="w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] text-white border-0"
             onClick={() => window.open('https://wa.me/917760456847', '_blank')}
             data-testid="button-whatsapp-hero"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            WhatsApp: +91 77604 56847
+            <SiWhatsapp className="w-7 h-7" />
           </Button>
           
           <Button
-            size="lg"
-            variant="outline"
-            className="text-base px-6 py-6 min-h-12 w-full sm:w-auto"
+            size="icon"
+            className="w-14 h-14 bg-primary hover:bg-primary/90 text-primary-foreground"
             onClick={() => window.location.href = 'tel:+917760456847'}
             data-testid="button-phone-hero"
           >
-            <Phone className="w-5 h-5 mr-2" />
-            Call: +91 77604 56847
+            <Phone className="w-7 h-7" />
+          </Button>
+
+          <Button
+            size="icon"
+            className="w-14 h-14 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:opacity-90 text-white border-0"
+            onClick={() => window.open('https://instagram.com/jasonzac', '_blank')}
+            data-testid="button-instagram-hero"
+          >
+            <Instagram className="w-7 h-7" />
+          </Button>
+
+          <Button
+            size="icon"
+            className="w-14 h-14 bg-[#FF0000] hover:bg-[#CC0000] text-white border-0"
+            onClick={() => window.open('https://youtube.com/jasonzac', '_blank')}
+            data-testid="button-youtube-hero"
+          >
+            <Youtube className="w-7 h-7" />
           </Button>
         </motion.div>
 
