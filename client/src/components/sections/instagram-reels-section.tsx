@@ -1,27 +1,9 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef, useEffect } from "react";
+import { ChevronLeft, ChevronRight, Instagram } from "lucide-react";
+import { useRef } from "react";
+import { Card } from "@/components/ui/card";
 
 export function InstagramReelsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Load Instagram embed script
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = '//www.instagram.com/embed.js';
-    document.body.appendChild(script);
-
-    // Process embeds when script loads
-    script.onload = () => {
-      if ((window as any).instgrm) {
-        (window as any).instgrm.Embeds.process();
-      }
-    };
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -33,13 +15,31 @@ export function InstagramReelsSection() {
     }
   };
 
-  const reelUrls = [
-    "https://www.instagram.com/reel/DC3eKETSdOP/",
-    "https://www.instagram.com/reel/DCweqcXSaiz/",
-    "https://www.instagram.com/reel/DCqo4XwyQGz/",
-    "https://www.instagram.com/reel/DCkxkQRyP-z/",
-    "https://www.instagram.com/reel/DCfMSIdSUke/",
-    "https://www.instagram.com/reel/DCbWwfYS2Nr/",
+  const reels = [
+    {
+      url: "https://www.instagram.com/reel/DC3eKETSdOP/",
+      thumbnail: "/images/student-1.jpg",
+    },
+    {
+      url: "https://www.instagram.com/reel/DCweqcXSaiz/",
+      thumbnail: "/images/student-2.jpg",
+    },
+    {
+      url: "https://www.instagram.com/reel/DCqo4XwyQGz/",
+      thumbnail: "/images/student-3.jpg",
+    },
+    {
+      url: "https://www.instagram.com/reel/DCkxkQRyP-z/",
+      thumbnail: "/images/student-4.jpg",
+    },
+    {
+      url: "https://www.instagram.com/reel/DCfMSIdSUke/",
+      thumbnail: "/images/student-5.jpg",
+    },
+    {
+      url: "https://www.instagram.com/reel/DCbWwfYS2Nr/",
+      thumbnail: "/images/student-6.jpg",
+    },
   ];
 
   return (
@@ -60,29 +60,30 @@ export function InstagramReelsSection() {
             className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {reelUrls.map((url, index) => (
-              <div
+            {reels.map((reel, index) => (
+              <a
                 key={index}
-                className="flex-shrink-0 snap-center"
+                href={reel.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 snap-center block group"
+                data-testid={`link-reel-${index}`}
               >
-                <blockquote
-                  className="instagram-media"
-                  data-instgrm-permalink={url}
-                  data-instgrm-version="14"
-                  style={{
-                    background: '#FFF',
-                    border: 0,
-                    borderRadius: '3px',
-                    boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
-                    margin: '1px',
-                    maxWidth: '540px',
-                    minWidth: '326px',
-                    padding: 0,
-                    width: 'calc(100% - 2px)',
-                  }}
-                  data-testid={`blockquote-reel-${index}`}
-                />
-              </div>
+                <Card className="w-[280px] h-[500px] overflow-hidden hover-elevate active-elevate-2 relative">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80 z-10 group-hover:to-background/90 transition-all" />
+                  <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between">
+                    <span className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <Instagram className="w-5 h-5" />
+                      Watch on Instagram
+                    </span>
+                  </div>
+                  <img
+                    src={reel.thumbnail}
+                    alt="Instagram Reel"
+                    className="w-full h-full object-cover"
+                  />
+                </Card>
+              </a>
             ))}
           </div>
 
