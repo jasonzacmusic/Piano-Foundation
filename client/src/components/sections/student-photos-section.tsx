@@ -76,7 +76,7 @@ export function StudentPhotosSection() {
               className="relative overflow-hidden group border border-primary/20"
               data-testid={`img-student-${index}`}
             >
-              <div className="relative aspect-square">
+              <div className="relative md:aspect-square" style={{ aspectRatio: "3 / 2" }}>
                 <img
                   src={photo.src}
                   alt={photo.alt}

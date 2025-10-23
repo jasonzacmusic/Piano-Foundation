@@ -47,20 +47,24 @@ export function FeesSection({ data, userRegion }: FeesSectionProps) {
           <Card className="p-8 md:p-12 border-2 border-primary/30 bg-primary/5">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+                <div className="flex items-baseline justify-center md:justify-start gap-2 mb-4">
                   {isDomestic ? (
-                    <IndianRupee className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+                    <>
+                      <IndianRupee className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+                      <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold">
+                        20,000
+                      </div>
+                      <span className="text-xs md:text-sm text-muted-foreground">(+GST)</span>
+                    </>
                   ) : (
-                    <DollarSign className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+                    <>
+                      <DollarSign className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+                      <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold">
+                        420
+                      </div>
+                    </>
                   )}
-                  <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold">
-                    {isDomestic ? currentFee.amount : `${currentFee.amount}$`}
-                  </div>
                 </div>
-                
-                <p className="text-sm text-muted-foreground">
-                  {typeof currentFee.region === 'string' ? currentFee.region : currentFee.region.join(', ')}
-                </p>
               </div>
 
               <div className="space-y-4">
