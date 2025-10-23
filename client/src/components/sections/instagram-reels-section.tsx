@@ -1,9 +1,30 @@
-import { ChevronLeft, ChevronRight, Instagram } from "lucide-react";
-import { useRef } from "react";
-import { Card } from "@/components/ui/card";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef, useEffect } from "react";
 
 export function InstagramReelsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load Instagram embed script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.instagram.com/embed.js';
+    document.body.appendChild(script);
+
+    // Process embeds after a short delay to ensure DOM is ready
+    const timeoutId = setTimeout(() => {
+      if ((window as any).instgrm) {
+        (window as any).instgrm.Embeds.process();
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -15,31 +36,13 @@ export function InstagramReelsSection() {
     }
   };
 
-  const reels = [
-    {
-      url: "https://www.instagram.com/reel/DC3eKETSdOP/",
-      thumbnail: "/images/student-1.jpg",
-    },
-    {
-      url: "https://www.instagram.com/reel/DCweqcXSaiz/",
-      thumbnail: "/images/student-2.jpg",
-    },
-    {
-      url: "https://www.instagram.com/reel/DCqo4XwyQGz/",
-      thumbnail: "/images/student-3.jpg",
-    },
-    {
-      url: "https://www.instagram.com/reel/DCkxkQRyP-z/",
-      thumbnail: "/images/student-4.jpg",
-    },
-    {
-      url: "https://www.instagram.com/reel/DCfMSIdSUke/",
-      thumbnail: "/images/student-5.jpg",
-    },
-    {
-      url: "https://www.instagram.com/reel/DCbWwfYS2Nr/",
-      thumbnail: "/images/student-6.jpg",
-    },
+  const reelUrls = [
+    "https://www.instagram.com/p/DC3eKETSdOP/",
+    "https://www.instagram.com/p/DCweqcXSaiz/",
+    "https://www.instagram.com/p/DCqo4XwyQGz/",
+    "https://www.instagram.com/p/DCkxkQRyP-z/",
+    "https://www.instagram.com/p/DCfMSIdSUke/",
+    "https://www.instagram.com/p/DCbWwfYS2Nr/",
   ];
 
   return (
@@ -60,30 +63,33 @@ export function InstagramReelsSection() {
             className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {reels.map((reel, index) => (
-              <a
+            {reelUrls.map((url, index) => (
+              <div
                 key={index}
-                href={reel.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 snap-center block group"
-                data-testid={`link-reel-${index}`}
+                className="flex-shrink-0 snap-center"
+                style={{ minWidth: '328px', maxWidth: '328px' }}
               >
-                <Card className="w-[280px] h-[500px] overflow-hidden hover-elevate active-elevate-2 relative">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80 z-10 group-hover:to-background/90 transition-all" />
-                  <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between">
-                    <span className="text-sm font-medium text-foreground flex items-center gap-2">
-                      <Instagram className="w-5 h-5" />
-                      Watch on Instagram
-                    </span>
-                  </div>
-                  <img
-                    src={reel.thumbnail}
-                    alt="Instagram Reel"
-                    className="w-full h-full object-cover"
-                  />
-                </Card>
-              </a>
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-captioned
+                  data-instgrm-permalink={url}
+                  data-instgrm-version="14"
+                  style={{
+                    background: '#FFF',
+                    border: 0,
+                    borderRadius: '3px',
+                    boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
+                    margin: '0',
+                    maxWidth: '328px',
+                    minWidth: '328px',
+                    padding: 0,
+                    width: '100%',
+                  }}
+                  data-testid={`blockquote-reel-${index}`}
+                >
+                  <a href={url} target="_blank" rel="noopener noreferrer">View on Instagram</a>
+                </blockquote>
+              </div>
             ))}
           </div>
 
