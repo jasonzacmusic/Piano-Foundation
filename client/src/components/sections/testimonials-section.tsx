@@ -1,15 +1,13 @@
 import { Card } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 interface Testimonial {
-  quote: string;
   name: string;
   role: string;
-  photo: string;
+  teaser: string;
+  quote: string;
 }
 
 interface TestimonialsSectionProps {
@@ -17,27 +15,11 @@ interface TestimonialsSectionProps {
 }
 
 export function TestimonialsSection({ data }: TestimonialsSectionProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 2; // Show 2 testimonials at a time on desktop, 1 on mobile
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
   };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const visibleTestimonials = data.slice(
-    currentIndex * itemsPerPage,
-    currentIndex * itemsPerPage + itemsPerPage
-  );
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-background">
@@ -51,91 +33,63 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
           </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto">
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[400px]">
-            {visibleTestimonials.map((testimonial, index) => {
-              const globalIndex = currentIndex * itemsPerPage + index;
-              return (
-                <motion.div
-                  key={globalIndex}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Card 
-                    className="p-8 md:p-10 h-full hover-elevate transition-all"
-                    data-testid={`card-testimonial-${globalIndex}`}
-                  >
-                    <div className="space-y-6">
-                      <Quote className="w-10 h-10 text-primary/30" />
-                      
-                      <p className="text-lg md:text-xl italic leading-relaxed">
-                        "{testimonial.quote}"
-                      </p>
-
-                      <div className="flex items-center gap-4 pt-4 border-t border-border">
-                        <Avatar className="w-16 h-16 ring-2 ring-primary/30 bg-muted">
-                          <AvatarImage 
-                            src={testimonial.photo} 
-                            alt={testimonial.name}
-                          />
-                          <AvatarFallback className="bg-gradient-to-br from-primary/20 to-accent/30 text-xs flex flex-col items-center justify-center">
-                            <span className="text-2xl">{testimonial.name.charAt(0)}</span>
-                            <span className="text-[8px] opacity-60">Add Photo</span>
-                          </AvatarFallback>
-                        </Avatar>
-                        
-                        <div>
-                          <p className="font-semibold">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                        </div>
-                      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+          {data.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              viewport={{ once: true }}
+            >
+              <Card 
+                className="p-5 hover-elevate transition-all cursor-pointer"
+                onClick={() => toggleExpand(index)}
+                data-testid={`card-testimonial-${index}`}
+              >
+                <div className="space-y-3">
+                  {/* Name and Role - Always Visible */}
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-base truncate">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                     </div>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </div>
+                    <div className="flex-shrink-0 text-primary">
+                      {expandedIndex === index ? (
+                        <ChevronUp className="w-5 h-5" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5" />
+                      )}
+                    </div>
+                  </div>
 
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevSlide}
-              data-testid="button-carousel-prev"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </Button>
-            
-            {/* Dots */}
-            <div className="flex gap-2">
-              {Array.from({ length: totalPages }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex
-                      ? "bg-primary w-8"
-                      : "bg-muted-foreground/30"
-                  }`}
-                  data-testid={`button-carousel-dot-${index}`}
-                  aria-label={`Go to page ${index + 1}`}
-                />
-              ))}
-            </div>
+                  {/* Teaser - Always Visible */}
+                  <p className="text-sm italic text-muted-foreground line-clamp-2">
+                    "{testimonial.teaser}"
+                  </p>
 
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextSlide}
-              data-testid="button-carousel-next"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </Button>
-          </div>
+                  {/* Full Quote - Expandable */}
+                  <AnimatePresence>
+                    {expandedIndex === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pt-3 border-t border-border">
+                          <p className="text-sm leading-relaxed">
+                            "{testimonial.quote}"
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

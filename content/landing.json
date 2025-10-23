@@ -170,40 +170,40 @@
 
   "testimonials": [
     {
-      "quote": "I joined as a complete beginner and performed my first live show in 6 months!",
-      "name": "Aarushi",
-      "role": "Student",
-      "photo": "/images/student-1.jpg"
+      "name": "Shashank Basavaraj",
+      "role": "Performance-Focused Student",
+      "teaser": "I think there is no music school in Bangalore that comes up with performance based learning that to in just four months.",
+      "quote": "Hi am learning Piano here. One of my friend suggested Nathaniel School Of Music. Teachers are to help full. I think there is no music school in Bangalore that comes up with performance based learning that to in just four months. I just love jam sessions and reviews given by Jason before the gig. This is the only place to learn music in and around Bangalore."
     },
     {
-      "quote": "This course gave me a solid foundation and made piano fun. I now use it in my own songs.",
-      "name": "Geeth",
-      "role": "Producer",
-      "photo": "/images/student-2.jpg"
+      "name": "Mala Govind",
+      "role": "Adult Learner/Level 2 Keyboard",
+      "teaser": "NSM has a very structured way of teaching. Jason is a very good teacher and has taught us in such a way that we understand theory well.",
+      "quote": "Well, at the outset a big thank you to NSM. I have loved being here. When I started I was in doubt as to how I was going to learn piano? NSM has a very structured way of teaching. The faculty is very good. Jason is a very good teacher and has taught us in such a way that we understand theory well. It has given me the opportunity to mix with the youngsters which I enjoyed. I have finished my 2nd level in keyboard and am very much looking forward to level 3. I have also started to respect a song, the musician and the instruments. A big thank you once again."
     },
     {
-      "quote": "The bottom-up approach changed everything for me. I can now accompany singers in any key!",
-      "name": "Priya Sharma",
-      "role": "Accompanist",
-      "photo": "/images/student-3.jpg"
+      "name": "Adam Talbot",
+      "role": "International Online Student",
+      "teaser": "Jason is an incredible teacher, he has a natural ability to teach complex methods but in a way that is easy to understand.",
+      "quote": "I have been learning piano with Jason Zac at Nathaniel now for over a year after discovering his amazing videos on YouTube. Jason is an incredible teacher, he has a natural ability to teach complex methods but in a way that is easy to understand. As I live abroad, lessons are done online via Zoom and Jason checks in during the week in a private WhatsApp group to review homework, etc, as well as answering any questions I have. I'd highly recommend Jason from beginners through to advanced players, you won't regret it."
     },
     {
-      "quote": "As a 68-year-old beginner, I was nervous. But the teaching style made it so approachable and fun!",
-      "name": "Ramesh Kumar",
-      "role": "Hobbyist",
-      "photo": "/images/student-4.jpg"
+      "name": "Khushpinder Sangha",
+      "role": "Vocal & Keyboard Student",
+      "teaser": "I had never played keyboard before in my life but within 8 months time I could pick up quite a bit.",
+      "quote": "I started with Nathaniel's about a year back. The school was recommended by a friend of mine who had done a guitar course here and I'm so glad I took the decision to join it. I did the level 1 vocals, and a level 1 and level 2 in keyboard. The curriculum is very well designed. I loved the theory classes with Jason. Even theory was taught in a very practical manner. Jason's keyboard classes are also the BEST. He is an amazing teacher who makes learning music a joyride. I had never played keyboard before in my life but within 8 months time I could pick up quite a bit. Along with the learning, the experience of jamming with a band, performing at the concert and recording in a studio is something that I loved. Another good thing is they keep having several workshops for those who want to learn more. The school is a great place for anyone who is sincere about music. You will have to put in the hard work and the hours but you will learn a ton."
     },
     {
-      "quote": "After years of classical training, this course opened my eyes to practical musicianship. Game changer!",
-      "name": "Meera Iyer",
-      "role": "Classical Pianist",
-      "photo": "/images/student-5.jpg"
+      "name": "Vipul Jain",
+      "role": "Beginner Keyboard Student",
+      "teaser": "From knowing nothing in music, to be able to figure out chords for any random song feels amazing.",
+      "quote": "From knowing nothing in music, to be able to figure out chords for any random song feels amazing. It has been an amazing experience at Nathaniel for me. Special thanks to Jason for his amazing way of teaching keyboard. A great aspect of this course is that you get to experience the Jamming experience which is wonderful. Also, you get to play in front of a live audience which can do amazing things to your confidence."
     },
     {
-      "quote": "The ear training and rhythm modules were incredible. I can now play by ear and improvise confidently.",
-      "name": "Arjun Desai",
-      "role": "Songwriter",
-      "photo": "/images/student-6.jpg"
+      "name": "Vivekananda Roy",
+      "role": "Experienced Musician",
+      "teaser": "An outstanding learning platform with enriching musical environment for all round growth of musicianship.",
+      "quote": "An outstanding learning platform with enriching musical environment for all round growth of musicianship including the main instrument, in my case the piano... an absolute delight learning from Mr Jason who is supremely gifted, talented and super creative musician beyond compare... I wish success to the School and wish more music enthusiasts, eager to learn, get blessed..."
     }
   ],
 
