@@ -37,9 +37,6 @@ export function Footer({ data }: FooterProps) {
                 alt="Nathaniel School of Music"
                 className="h-12 md:h-16 mb-4"
               />
-              <h3 className="font-serif text-xl font-semibold mb-2">
-                {data.tagline}
-              </h3>
               <p className="text-muted-foreground">
                 {data.description}
               </p>
@@ -116,12 +113,23 @@ export function Footer({ data }: FooterProps) {
                 <span>{data.contact.phone}</span>
               </a>
 
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <div className="space-y-1">
-                  {data.locations.map((location, index) => (
-                    <p key={index}>{location}</p>
-                  ))}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-muted-foreground">
+                  <MapPin className="w-5 h-5 flex-shrink-0" />
+                  <span className="font-medium">Our Locations</span>
+                </div>
+                <div className="rounded-lg overflow-hidden border border-primary/20">
+                  <iframe
+                    src="https://maps.google.com/maps?q=Nathaniel+School+of+Music+Bangalore&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Nathaniel School of Music Locations"
+                    data-testid="map-locations"
+                  ></iframe>
                 </div>
               </div>
             </div>
