@@ -3,12 +3,12 @@ export function StudentPhotosSection() {
     {
       src: "/images/student-playing-1.jpg",
       alt: "Student performing at piano",
-      position: "center 20%"
+      position: "center 15%"
     },
     {
       src: "/images/student-playing-2.jpg",
       alt: "Student learning piano in class",
-      position: "center 35%"
+      position: "center 25%"
     }
   ];
 
