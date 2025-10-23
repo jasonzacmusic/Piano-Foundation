@@ -76,12 +76,15 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
                       </p>
 
                       <div className="flex items-center gap-4 pt-4 border-t border-border">
-                        <Avatar className="w-12 h-12 ring-2 ring-primary/20">
+                        <Avatar className="w-16 h-16 ring-2 ring-primary/30 bg-muted">
                           <AvatarImage 
                             src={testimonial.photo} 
                             alt={testimonial.name}
                           />
-                          <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                          <AvatarFallback className="bg-gradient-to-br from-primary/20 to-accent/30 text-xs flex flex-col items-center justify-center">
+                            <span className="text-2xl">{testimonial.name.charAt(0)}</span>
+                            <span className="text-[8px] opacity-60">Add Photo</span>
+                          </AvatarFallback>
                         </Avatar>
                         
                         <div>
