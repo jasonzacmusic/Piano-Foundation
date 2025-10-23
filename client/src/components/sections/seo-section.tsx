@@ -29,10 +29,13 @@ export function SEOSection() {
             </p>
             
             <p>
-              You can choose the learning mode that suits you - online, offline, hybrid, private, group. Join students from across 
-              Bangalore and around the globe who have trusted <strong>Jason Zac's piano courses</strong> to start their musical journey. 
-              With our structured curriculum, <strong>chord progression</strong> training, and personalised guidance, the 
-              <strong>Nathaniel School of Music</strong> is your go-to destination for <strong>piano lessons in Bangalore</strong> and 
+              You can choose the learning mode that suits you: online, offline, hybrid, private, or group.
+            </p>
+            
+            <p>
+              Join students from across Bangalore and around the globe who have trusted <strong>Jason Zac's piano courses</strong> to 
+              start their musical journey. With our structured curriculum, <strong>chord progression</strong> training, and personalised 
+              guidance, the <strong>Nathaniel School of Music</strong> is your go-to destination for <strong>piano lessons in Bangalore</strong> and 
               <strong>online piano classes</strong>.
             </p>
           </div>
