@@ -26,13 +26,13 @@ export function StudentPhotosSection() {
           {photos.map((photo, index) => (
             <div 
               key={index}
-              className="relative aspect-[4/3] rounded-lg overflow-hidden group"
+              className="relative rounded-lg overflow-hidden group"
               data-testid={`img-student-${index}`}
             >
               <img
                 src={photo.src}
                 alt={photo.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                 style={{
                   filter: "sepia(0.3) brightness(0.85) contrast(1.15) saturate(0.85) hue-rotate(10deg)",
                 }}
