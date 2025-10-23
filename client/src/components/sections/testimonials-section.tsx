@@ -29,7 +29,7 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
             Student Success Stories
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real results from real students
+            Hear From Our Students About Their Piano Journey
           </p>
         </div>
 

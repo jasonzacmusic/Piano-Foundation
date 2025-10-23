@@ -1,6 +1,6 @@
 {
   "hero": {
-    "headline": "Learn Piano the Right Way – From Beginner to Performer in 6 Months",
+    "headline": "Learn Piano the Right Way : From Beginner to Performer in 6 Months",
     "subheadline": "Structured. Practical. Performance-based. For all ages.",
     "buttons": {
       "primary": {
@@ -30,12 +30,12 @@
     {
       "icon": "Piano",
       "title": "All 12 Keys",
-      "description": "Go beyond C major — play confidently in every key."
+      "description": "Go beyond C major - play confidently in every key."
     },
     {
       "icon": "Users",
       "title": "Accompaniment + Solo Playing",
-      "description": "Support singers & bands, or perform solo with melody and harmony."
+      "description": "Support singers & bands or perform solo with melody and harmony."
     },
     {
       "icon": "Library",
@@ -50,17 +50,17 @@
     {
       "icon": "Video",
       "title": "Flexible Modes",
-      "description": "Attend live online, offline in Bangalore, or hybrid - with HD recordings."
+      "description": "Attend live online, offline in Bangalore or hybrid with HD recordings."
     },
     {
       "icon": "Smile",
       "title": "For All Ages",
-      "description": "We've trained students from age 7 to 75+ — it's never too late to start."
+      "description": "We've trained students from age 7 to 75+, it's never too late to start."
     },
     {
       "icon": "Headphones",
       "title": "Ear Training & Listening Skills",
-      "description": "Develop your ear to recognize chords, scales, intervals, and rhythms — then transcribe melodies and play songs by ear."
+      "description": "Develop your ear to recognize chords, scales, intervals, and rhythms, then transcribe melodies and play songs by ear."
     },
     {
       "icon": "Music2",
@@ -129,10 +129,10 @@
   },
 
   "coursePreview": {
-    "title": "Get a Taste of What You'll Learn",
-    "subtitle": "Watch a free demo lesson from our Foundation Piano Course",
+    "title": "Get a Detailed Look at What's Covered in the Course",
+    "subtitle": "A Complete Overview of Topics, Exercises, and Learning Goals",
     "videoUrl": "https://www.youtube.com/watch?v=XRCsDqzzNI4",
-    "description": "In this 10-minute preview, you'll see our unique bottom-up teaching approach in action. Learn how we make complex musical concepts simple and practical."
+    "description": "In this video, our faculty explains the Piano Foundation Course in detail. Whether you prefer group classes or private lessons, online or offline, this course is designed for anyone who want a structured, hands-on approach to learning piano."
   },
 
   "whoIsFor": [
@@ -223,7 +223,7 @@
   "faq": [
     {
       "question": "Do I need my own keyboard?",
-      "answer": "Yes. You'll need a keyboard or piano at home to practice between lessons. We recommend a full-size (61–88 keys) touch-sensitive keyboard to get the most realistic playing experience. Our team can guide you with recommendations if you're looking to buy one."
+      "answer": "Yes. You'll need a keyboard or piano at home to practice between lessons. We recommend a full-size (61-88 keys) touch-sensitive keyboard to get the most realistic playing experience. Our team can guide you with recommendations if you're looking to buy one."
     },
     {
       "question": "Is this only for beginners?",
@@ -235,11 +235,11 @@
     },
     {
       "question": "What age group is this for?",
-      "answer": "We've trained students from age 7 to 75+! The course is structured to adapt to each learner's goals and pace. It's never too early — or too late — to start learning music."
+      "answer": "We've trained students from age 7 to 75+! The course is structured to adapt to each learner's goals and pace. It's never too early or too late to start learning music."
     },
     {
       "question": "Can I learn from outside India?",
-      "answer": "Yes! Our classes are time-zone friendly and available live online or in hybrid mode (live + recordings). We have students joining from all over the world — from Singapore to the U.S. — learning at their convenience."
+      "answer": "Yes! Our classes are time-zone friendly and available live online or in hybrid mode (live + recordings). We have students joining from all over the world, from Singapore to the U.S., learning at their convenience."
     },
     {
       "question": "Do I get a certificate after completing the course?",
@@ -267,7 +267,7 @@
     },
     {
       "question": "What's the learning approach in the Piano Foundation Course?",
-      "answer": "We start from the absolute fundamentals — from understanding the piano keys to correct posture. From the very first class, students learn to play with both hands. Our lessons are not limited to one genre or key. Students explore a variety of musical styles and practice in different keys, helping them become versatile pianists. By the end of the course, every student is trained to perform both as a solo pianist and as an accompanist. We also encourage students to suggest songs they would like to learn, making the experience more personal and relevant."
+      "answer": "We start from the absolute fundamentals, from understanding the piano keys to correct posture. From the very first class, students learn to play with both hands. Our lessons are not limited to one genre or key. Students explore a variety of musical styles and practice in different keys, helping them become versatile pianists. By the end of the course, every student is trained to perform both as a solo pianist and as an accompanist. We also encourage students to suggest songs they would like to learn, making the experience more personal and relevant."
     }
   ],
 

@@ -133,10 +133,10 @@ export function FreeTutorialsSection() {
           className="text-center mb-8 md:mb-12 space-y-4"
         >
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Free Beginner Tutorials
+            See How We Teach
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Start learning right away with these hand-picked lessons from our YouTube channel
+            Understand our teaching style and class structure with these hand-picked lessons by our faculty.
           </p>
         </motion.div>
 

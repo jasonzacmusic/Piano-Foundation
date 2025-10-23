@@ -1,0 +1,14 @@
+1. In the hero section, keep the heading - Learn Piano the Right Way : From Beginner to Performer in 6 Months - constant in all versions of the webpage
+2. In the next section, instead of ‘Get a Taste of What You’ll Learn’ keep ‘Get a Detailed Look at What’s Covered in the Course’
+3. Under the heading of the video replace the subheading ‘Watch a free demo lesson from our Foundation Piano Course’ with ‘A Complete Overview of Topics, Exercises, and Learning Goals’
+4. Rewrite the video description to ‘In this video, our faculty explains the Piano Foundation Course in detail. Whether you prefer group classes or private lessons, online or offline, this course is designed for anyone who want a structured, hands-on approach to learning piano.’
+5. Change the section heading ‘Free Beginner Tutorials’ to ‘See How We Teach’ and the description under it to ’Understand our teaching style and class structure with these hand-picked lessons by our faculty.’
+6. Replace ‘—‘ with ‘-‘ everywhere and make sure it is replaced with a comma wherever the dash is not required
+7. Under the heading ‘Student Success Stories’, keep the subheading ‘Hear From Our Students About Their Piano Journey’ instead of ‘Real results from real students’
+8. Replace the text in the last sections, I.e., below the FAQ section with this:”Looking for piano lessons in Bangalore or wanting to learn piano from home?
+
+The Nathaniel School of Music, recognised as one of the best music schools in Bangalore, offers comprehensive, performance based piano classes.
+
+Our 6 - month Piano Foundation Course is perfect for beginners and combines practical playing skills, music theory, ear training, and mastery of chords and scales. Whether you are searching for “piano classes near me” or "beginner piano courses online", this course provides a structured, hands-on learning experience.
+
+You can choose the learning mode that suits you - online,offline,hybrid, private,group. Join students from across Bangalore and around the globe who have trusted Jason Zac’s piano courses to start their musical journey. With our structured curriculum, chord progression training, and personalised guidance, the Nathaniel School of Music is your go-to destination for piano lessons in Bangalore and online piano classes.”
