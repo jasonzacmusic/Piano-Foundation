@@ -3,12 +3,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export function EnquiryForm() {
   const [formData, setFormData] = useState({
     name: "",
+    countryCode: "+91",
     whatsapp: "",
     email: ""
   });
@@ -23,7 +31,7 @@ export function EnquiryForm() {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Construct WhatsApp message
-    const message = `Hi! I'd like to enquire about the Piano Foundation Course.%0A%0AName: ${formData.name}%0AWhatsApp: ${formData.whatsapp}%0AEmail: ${formData.email}`;
+    const message = `Hi! I'd like to enquire about the Piano Foundation Course.%0A%0AName: ${formData.name}%0AWhatsApp: ${formData.countryCode} ${formData.whatsapp}%0AEmail: ${formData.email}`;
     const whatsappUrl = `https://wa.me/917760456847?text=${message}`;
 
     // Open WhatsApp
@@ -34,7 +42,7 @@ export function EnquiryForm() {
       description: "We'll get back to you shortly via WhatsApp.",
     });
 
-    setFormData({ name: "", whatsapp: "", email: "" });
+    setFormData({ name: "", countryCode: "+91", whatsapp: "", email: "" });
     setIsSubmitting(false);
   };
 
@@ -69,15 +77,35 @@ export function EnquiryForm() {
 
           <div className="space-y-2">
             <Label htmlFor="whatsapp">WhatsApp Number</Label>
-            <Input
-              id="whatsapp"
-              type="tel"
-              placeholder="+91 XXXXX XXXXX"
-              value={formData.whatsapp}
-              onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-              required
-              data-testid="input-enquiry-whatsapp"
-            />
+            <div className="flex gap-2">
+              <Select
+                value={formData.countryCode}
+                onValueChange={(value) => setFormData({ ...formData, countryCode: value })}
+              >
+                <SelectTrigger className="w-[120px]" data-testid="select-country-code">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="+91">🇮🇳 +91</SelectItem>
+                  <SelectItem value="+1">🇺🇸 +1</SelectItem>
+                  <SelectItem value="+44">🇬🇧 +44</SelectItem>
+                  <SelectItem value="+971">🇦🇪 +971</SelectItem>
+                  <SelectItem value="+65">🇸🇬 +65</SelectItem>
+                  <SelectItem value="+61">🇦🇺 +61</SelectItem>
+                  <SelectItem value="+60">🇲🇾 +60</SelectItem>
+                </SelectContent>
+              </Select>
+              <Input
+                id="whatsapp"
+                type="tel"
+                placeholder="XXXXX XXXXX"
+                value={formData.whatsapp}
+                onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                required
+                className="flex-1"
+                data-testid="input-enquiry-whatsapp"
+              />
+            </div>
           </div>
 
           <div className="space-y-2">

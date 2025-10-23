@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Phone, Instagram, Youtube } from "lucide-react";
+import { CheckCircle, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { trackEnrollmentClick, trackEnrollmentFormOpened } from "@/lib/analytics";
-import { SiWhatsapp } from "react-icons/si";
+import { EnquiryForm } from "@/components/enquiry-form";
 
 interface HeroProps {
   data: {
@@ -59,28 +59,7 @@ export function HeroSection({ data, onEnrollClick }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button
-              size="lg"
-              className="text-base md:text-lg px-8 py-6 min-h-14"
-              onClick={() => {
-                trackEnrollmentClick('hero_primary_cta');
-                trackEnrollmentFormOpened('hero_primary_cta');
-                onEnrollClick?.();
-                window.open(data.buttons.primary.link, '_blank');
-              }}
-              data-testid="button-enrol-hero"
-            >
-              {data.buttons.primary.text}
-            </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap gap-4 md:gap-6 justify-center items-center pt-4"
+            className="flex flex-wrap gap-4 md:gap-6 justify-center items-center"
           >
             {data.trust.map((item, index) => (
               <div
@@ -92,6 +71,33 @@ export function HeroSection({ data, onEnrollClick }: HeroProps) {
                 <span>{item}</span>
               </div>
             ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex justify-center pt-4"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="gap-3 text-base md:text-lg px-8 py-6 min-h-14 border-2 border-primary/50 hover:bg-primary/10 hover:border-primary bg-background/50 backdrop-blur-sm"
+              onClick={() => window.open('/Piano-Foundation-Course-Brochure.pdf', '_blank')}
+              data-testid="button-download-brochure-hero"
+            >
+              <Download className="w-5 h-5" />
+              <span>Download Course Brochure</span>
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="pt-8 max-w-xl mx-auto w-full"
+          >
+            <EnquiryForm />
           </motion.div>
         </div>
       </div>
