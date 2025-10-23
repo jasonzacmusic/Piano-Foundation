@@ -20,7 +20,7 @@ interface HeroProps {
 
 export function HeroSection({ data, onEnrollClick }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 md:mt-24">
       <div 
         className="absolute inset-0 z-0"
         style={{

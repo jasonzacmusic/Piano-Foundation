@@ -123,7 +123,7 @@ export function FreeTutorialsSection() {
   if (selectedTutorials.length === 0) return null;
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background">
+    <section className="py-8 md:py-12 lg:py-14 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

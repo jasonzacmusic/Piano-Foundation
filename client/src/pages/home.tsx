@@ -13,6 +13,7 @@ import { CoursePreviewSection } from "@/components/sections/course-preview-secti
 import { FreeTutorialsSection } from "@/components/sections/free-tutorials-section";
 import { WhoIsForSection } from "@/components/sections/who-is-for-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { InstagramReelsSection } from "@/components/sections/instagram-reels-section";
 import { FeesSection } from "@/components/sections/fees-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { SEOSection } from "@/components/sections/seo-section";
@@ -108,6 +109,8 @@ export default function Home() {
       <WhoIsForSection data={landingData.whoIsFor} />
       
       <TestimonialsSection data={landingData.testimonials} />
+      
+      <InstagramReelsSection />
       
       <FeesSection 
         data={landingData.fees} 

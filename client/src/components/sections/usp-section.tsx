@@ -30,7 +30,7 @@ export function USPSection({ data }: USPSectionProps) {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background">
+    <section className="py-8 md:py-12 lg:py-14 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-8 md:mb-12 space-y-4">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
