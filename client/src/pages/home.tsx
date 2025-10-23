@@ -5,6 +5,7 @@ import { AB_TESTS, trackABTestConversion } from "@/lib/ab-testing";
 import { trackEnrollmentFormReturn } from "@/lib/analytics";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero-section";
+import { PianoDivider } from "@/components/sections/piano-divider";
 import { USPSection } from "@/components/sections/usp-section";
 import { SyllabusSection } from "@/components/sections/syllabus-section";
 import { CourseStructureSection } from "@/components/sections/course-structure-section";
@@ -79,6 +80,8 @@ export default function Home() {
         data={heroData} 
         onEnrollClick={handleEnrollmentClick}
       />
+      
+      <PianoDivider />
       
       <CoursePreviewSection data={landingData.coursePreview} />
       
