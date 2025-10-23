@@ -1,13 +1,21 @@
 # Image Management Guide
 
-## Current Images
+## Current Images in This Folder
 
 ### Active Images (DO NOT DELETE)
 - **060A0073.jpg** - Hero background image (classroom/teaching scene)
-- **jason-riffs.jpg** - Instructor photo (Jason Zac)
-- **nsm-logo-main.png** - Primary NSM logo (white version for dark backgrounds)
+- **jason-riffs.jpg** - Instructor photo (Jason Zac portrait)
+- **nsm-logo-main.png** - Primary NSM logo (white version)
 - **nsm-logo-black.png** - NSM logo black version
 - **nsm-logo-white.png** - NSM logo white version
+
+### Missing - Ready for Upload
+- **student-1.jpg** - Placeholder visible on site with "A" initial
+- **student-2.jpg** - Placeholder visible on site with "G" initial
+- **student-3.jpg** - Placeholder visible on site with "P" initial
+- **student-4.jpg** - Placeholder visible on site with "R" initial
+- **student-5.jpg** - Placeholder visible on site with "M" initial
+- **student-6.jpg** - Placeholder visible on site with "A" initial
 
 ## Adding Student Photos for Testimonials
 
