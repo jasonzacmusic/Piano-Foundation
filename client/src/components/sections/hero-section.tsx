@@ -33,8 +33,8 @@ export function HeroSection({ data, onEnrollClick }: HeroProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/75 to-background/85" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-20">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export function HeroSection({ data, onEnrollClick }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap gap-4 md:gap-6 justify-center items-center pt-8"
+            className="flex flex-wrap gap-4 md:gap-6 justify-center items-center pt-4"
           >
             {data.trust.map((item, index) => (
               <div
