@@ -12,6 +12,16 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**October 23, 2025 - Vintage Design Update & Image Management**
+- Updated color scheme from modern dark mode to vintage/rustic piano conservatory aesthetic
+- Color palette: Warm browns (30° hue), creams, and antique gold tones (42° hue)
+- Replaced all placeholder photos with 2 actual instructor photos:
+  - Hero: 060A0073.jpg (teaching/classroom scene)
+  - Instructor: jason-riffs.jpg (Jason Zac portrait)
+- Prepared testimonials section for 6 student photos (student-1.jpg through student-6.jpg)
+- Cleaned up image directory - removed all placeholder images, kept only NSM logos and active photos
+- Created image management documentation (`client/public/images/README.md`) for easy student photo uploads
+
 **October 20, 2025 - Phase 2 Enhancement Release**
 - Added Google Analytics integration with comprehensive event tracking
 - Implemented A/B testing system for hero headlines and CTA buttons
@@ -32,7 +42,7 @@ Preferred communication style: Simple, everyday language.
 **Styling & Design System**
 - **Tailwind CSS**: Utility-first CSS framework with custom design tokens
 - **shadcn/ui**: Pre-built accessible component library built on Radix UI primitives
-- **Design Philosophy**: Dark mode default with sophisticated color palette (gold accents on dark backgrounds) inspired by premium educational platforms like MasterClass
+- **Design Philosophy**: Vintage/rustic piano conservatory aesthetic with warm brown tones (30° hue, 8-18% saturation), cream text, and antique gold accents (42° hue)
 - **Typography**: Playfair Display (serif) for headings, Inter (sans-serif) for body text
 - **Animations**: Framer Motion for subtle fade/slide effects on scroll
 
