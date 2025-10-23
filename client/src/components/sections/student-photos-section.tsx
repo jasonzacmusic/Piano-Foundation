@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function StudentPhotosSection() {
   const photos = [
@@ -50,35 +50,164 @@ export function StudentPhotosSection() {
     }
   ];
 
-  // Course highlights pool - randomly assigned to photos
-  const courseHighlights = [
+  // Massive pool of course highlights (80+ unique highlights)
+  const allHighlights = [
+    // USPs & Core Features
     "Learn all 12 keys - go beyond C major!",
-    "Performance-based learning in just 6 months",
-    "From knowing nothing to figuring out chords for any song",
     "Bottom-up approach: Start with rhythm & chords",
-    "Master blues, gospel, Bollywood, pop & Indian ragas",
-    "Play confidently in every key with proper technique",
     "Accompaniment + Solo playing skills combined",
-    "Jason is an incredible teacher with a natural ability",
+    "Performance-based learning in just 6 months",
+    "Play confidently in every key with proper technique",
+    "Master blues, gospel, Bollywood, pop & Indian ragas",
     "Students from age 7 to 75+ successfully learning",
-    "Weekly assignments with structured feedback",
-    "Learn chord progressions & harmony fundamentals",
-    "Develop your ear to play songs by listening",
     "Live online, offline or hybrid - your choice",
-    "Experience jamming with a band & live performances",
-    "Very structured way of teaching - understand theory well",
     "HD recordings available for every class",
-    "Intro to ragas & transposition techniques",
-    "Afro-Cuban rhythms, swing feels & Konnakol basics",
+    "Weekly assignments with structured feedback",
+    "Graded certificate upon completion",
+    
+    // Student Testimonials
+    "From knowing nothing to figuring out chords for any song",
+    "Jason is an incredible teacher with a natural ability",
+    "Very structured way of teaching - understand theory well",
+    "Experience jamming with a band & live performances",
+    "I never played before, within 8 months I could pick up quite a bit",
+    "Performance based learning - the only place in Bangalore",
+    "Learning music has been a joyride with Jason",
+    "Play in front of a live audience - does wonders for confidence",
+    "An outstanding platform for all-round growth of musicianship",
+    "Jason makes complex methods easy to understand",
+    
+    // Piano Skills
+    "Master major, minor, pentatonic & blues scales",
+    "Learn chord inversions and block chords",
+    "12-bar blues patterns and progressions",
+    "Left-hand patterns + right-hand melody coordination",
+    "Waltz, Oom-Pah, Afro-Cuban, Folk & Rock styles",
+    "Note recognition and 5-finger drill mastery",
+    "Professional piano technique from day one",
+    
+    // Music Theory
+    "Understand staff notation & note values",
+    "Master intervals and the circle of fifths",
+    "Chord progressions & harmony fundamentals",
+    "Learn ragas and transposition techniques",
+    "Decode song structure like a pro",
+    "Music theory taught in a practical manner",
+    
+    // Ear Training
+    "Develop your ear to play songs by listening",
+    "Transcribe melodies and rhythms accurately",
+    "Identify scales by ear with confidence",
+    "Compute song keys just by listening",
+    "Recognize intervals and melodic curves",
+    "Train your ear to hear chord progressions",
+    
+    // Rhythm Training
+    "Master bars, beats & sub-beats",
+    "Understand straight vs swing feels",
+    "Triplets and sixteenth notes made simple",
+    "Afro-Cuban rhythms and Clave patterns",
+    "Learn basics of Konnakol rhythmic patterns",
+    "Develop rock-solid timing and groove",
+    
+    // Course Structure
     "20 instrument classes + 12 musicianship classes",
-    "Transcribe melodies & identify scales by ear",
-    "From beginner to performer - real stage experience"
+    "32+ hours of comprehensive training",
+    "From beginner to performer in 6 months",
+    "Weekly exams to track your progress",
+    "Live sessions plus recordings for flexibility",
+    "Structured like a real music school",
+    
+    // Teaching Approach
+    "Real-world skills before traditional methods",
+    "Support singers & bands or perform solo",
+    "Learn by doing - practical from day one",
+    "Genre diversity: Blues to Bollywood",
+    "Every class is recorded in HD quality",
+    "Private WhatsApp group for homework feedback",
+    
+    // For Different Learners
+    "Perfect for absolute beginners starting fresh",
+    "Trinity/ABRSM students seeking practical skills",
+    "Ideal for producers & DJs adding live skills",
+    "Great for songwriters needing music theory",
+    "Adults and seniors thriving in our classes",
+    "Build foundation to become a music teacher",
+    
+    // Performance & Application
+    "Apply learning through live stage performances",
+    "Studio recording experience included",
+    "Jam sessions and band experience",
+    "Showcase your skills in structured exams",
+    "Real gigs and performance opportunities",
+    
+    // Advanced Skills
+    "Play by ear and improvise confidently",
+    "Understand what you're playing, not just where",
+    "Accompany singers in any key",
+    "Create your own chord progressions",
+    "Develop musicianship beyond just playing notes",
+    
+    // Practical Benefits
+    "Turn your passion into performance",
+    "Compose with deeper musical knowledge",
+    "Add professional piano to your skill set",
+    "Perform both melody and harmony together",
+    "Join a community of passionate learners",
+    
+    // Unique Selling Points
+    "Jason Zac - supremely gifted and talented musician",
+    "Discovered through amazing YouTube tutorials",
+    "Best music school in Bangalore for piano",
+    "Flexible modes: Online, offline or hybrid",
+    "Mix with students of all ages and backgrounds",
+    "Workshops and masterclasses throughout the year"
   ];
 
-  // Randomly assign one highlight to each photo
-  const getRandomHighlight = (index: number) => {
-    // Use index as seed for consistent but varied selection
-    return courseHighlights[(index * 7) % courseHighlights.length];
+  // Track used highlights globally to avoid repeats
+  const [usedHighlights, setUsedHighlights] = useState<Set<string>>(new Set());
+  const [photoHighlights, setPhotoHighlights] = useState<{ [key: number]: string }>({});
+
+  // Initialize with random highlights for each photo
+  useEffect(() => {
+    const initialHighlights: { [key: number]: string } = {};
+    const used = new Set<string>();
+    
+    photos.forEach((_, index) => {
+      const available = allHighlights.filter(h => !used.has(h));
+      if (available.length > 0) {
+        const randomIndex = Math.floor(Math.random() * available.length);
+        const highlight = available[randomIndex];
+        initialHighlights[index] = highlight;
+        used.add(highlight);
+      }
+    });
+    
+    setPhotoHighlights(initialHighlights);
+    setUsedHighlights(used);
+  }, []);
+
+  // Get new random highlight on hover (avoiding repeats)
+  const getNewHighlight = (photoIndex: number) => {
+    const available = allHighlights.filter(h => !usedHighlights.has(h));
+    
+    // If all highlights used, reset the pool but keep current photo's highlight
+    if (available.length === 0) {
+      const currentHighlight = photoHighlights[photoIndex];
+      setUsedHighlights(new Set([currentHighlight]));
+      const freshAvailable = allHighlights.filter(h => h !== currentHighlight);
+      const randomIndex = Math.floor(Math.random() * freshAvailable.length);
+      const newHighlight = freshAvailable[randomIndex];
+      
+      setPhotoHighlights(prev => ({ ...prev, [photoIndex]: newHighlight }));
+      setUsedHighlights(prev => new Set([...prev, newHighlight]));
+    } else {
+      const randomIndex = Math.floor(Math.random() * available.length);
+      const newHighlight = available[randomIndex];
+      
+      setPhotoHighlights(prev => ({ ...prev, [photoIndex]: newHighlight }));
+      setUsedHighlights(prev => new Set([...prev, newHighlight]));
+    }
   };
 
   return (
@@ -100,7 +229,7 @@ export function StudentPhotosSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 max-w-6xl mx-auto">
           {photos.map((photo, index) => {
-            const highlight = getRandomHighlight(index);
+            const highlight = photoHighlights[index] || allHighlights[0];
             
             return (
               <motion.div
@@ -110,6 +239,7 @@ export function StudentPhotosSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative overflow-hidden group border border-primary/20"
                 data-testid={`img-student-${index}`}
+                onMouseEnter={() => getNewHighlight(index)}
               >
                 <div className="relative md:aspect-square" style={{ aspectRatio: "3 / 2" }}>
                   <img
@@ -125,15 +255,17 @@ export function StudentPhotosSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-60" />
                   
-                  {/* Highlight overlay - visible on hover (desktop) or always visible (mobile) */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/95 to-background/80 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:opacity-0 touch:opacity-100">
-                    <p className="text-sm md:text-base font-medium text-foreground leading-relaxed">
-                      ✨ {highlight}
-                    </p>
+                  {/* Highlight overlay - visible on hover (desktop) */}
+                  <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-background via-background/95 to-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 flex items-end p-4">
+                      <p className="text-sm md:text-base font-medium text-foreground leading-relaxed">
+                        ✨ {highlight}
+                      </p>
+                    </div>
                   </div>
 
                   {/* Mobile-only: Always show highlight at bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-3 md:hidden">
+                  <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-3">
                     <p className="text-xs font-medium text-foreground/90 leading-tight">
                       ✨ {highlight}
                     </p>
