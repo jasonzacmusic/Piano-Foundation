@@ -20,7 +20,19 @@ interface HeroProps {
 
 export function HeroSection({ data, onEnrollClick }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 md:mt-24 bg-gradient-to-b from-background via-card/20 to-background">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 md:mt-24">
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url(/images/hero-background.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "sepia(0.3) brightness(0.7) contrast(1.05) saturate(0.85)",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/75 to-background/85" />
+      </div>
+
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-20">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <motion.h1
@@ -70,8 +82,8 @@ export function HeroSection({ data, onEnrollClick }: HeroProps) {
             <Button
               size="lg"
               variant="outline"
-              className="gap-3 text-base md:text-lg px-8 py-6 min-h-14 border-2 border-primary/50 hover:bg-primary/10 hover:border-primary"
-              onClick={() => window.open('/Vocal-Foundation-Course-Brochure.pdf', '_blank')}
+              className="gap-3 text-base md:text-lg px-8 py-6 min-h-14 border-2 border-primary/50 hover:bg-primary/10 hover:border-primary bg-background/50 backdrop-blur-sm"
+              onClick={() => window.open('/Piano-Foundation-Course-Brochure.pdf', '_blank')}
               data-testid="button-download-brochure-hero"
             >
               <Download className="w-5 h-5" />
