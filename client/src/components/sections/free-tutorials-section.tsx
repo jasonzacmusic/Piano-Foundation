@@ -1,105 +1,60 @@
 import { Card } from "@/components/ui/card";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { trackVideoPlay } from "@/lib/analytics";
 
 interface Tutorial {
   title: string;
   url: string;
-  category: "piano" | "ear-training" | "chords" | "rhythm" | "theory";
+  category: "piano" | "ear-training" | "theory" | "song-learning" | "technology";
 }
 
-const allTutorials: Tutorial[] = [
+const selectedTutorials: Tutorial[] = [
   {
-    title: "How to Play Bella Ciao on Piano (Beginner to Advanced Lesson)",
-    url: "https://youtu.be/BaTywzMGA2U",
+    title: "How to Use 'Wrong' Notes Creatively - Interval Magic",
+    url: "https://youtu.be/W6rTUhK4RgY",
     category: "piano"
   },
   {
-    title: "Beginner Piano Lesson to Get Your Hands Flowing Together",
-    url: "https://youtu.be/hUCw78d0HKQ",
+    title: "5 Piano Techniques I Use ALL the Time for Fills and Solos",
+    url: "https://youtu.be/JHPK4FCSPOg",
     category: "piano"
   },
   {
-    title: "12-Bar Blues Piano for Beginners – SING & PLAY",
-    url: "https://www.youtube.com/watch?v=DtH5pDjc0Cg",
+    title: "Left Hand Piano Arpeggios Tutorial - Octaves, Spread Voicings & Intervals",
+    url: "https://youtu.be/dFbfYE0r8Ws",
     category: "piano"
   },
   {
-    title: "5 Finger Piano Exercises for Beginners – Designed to Inspire!",
-    url: "https://www.youtube.com/watch?v=5XnCmm8qVzk",
-    category: "piano"
+    title: "Chord Progressions That Changed Music Forever",
+    url: "https://youtu.be/s0yC6Ojixso",
+    category: "theory"
   },
   {
-    title: "Beginner Piano Exercises that ACTUALLY Sound Nice!",
-    url: "https://www.youtube.com/watch?v=OytZmkGClK4",
-    category: "piano"
+    title: "Voice Leading Explained: Why Every Musician Needs It",
+    url: "https://youtu.be/0w-8y38kKKA",
+    category: "theory"
   },
   {
-    title: "Ear Training Exercises for Beginners (5 Piano Levels)",
-    url: "https://www.youtube.com/watch?v=NNEjziA2GY0",
+    title: "Triads Aren't Just 3 Notes! Learn to Sing Any Triad",
+    url: "https://youtu.be/La3PJILVppg",
     category: "ear-training"
   },
   {
-    title: "Beginner's Guide to Chord Inversions: Step-by-Step Piano Lesson",
-    url: "https://youtu.be/KU4YLMlN5hk",
-    category: "chords"
+    title: "Interval Training – The Secret to Playing by Ear",
+    url: "https://youtu.be/OVdK3pXbqg8",
+    category: "ear-training"
   },
   {
-    title: "4 Left-Hand Piano Chord Patterns for Beginners",
-    url: "https://youtu.be/CAV2SafUsZ4",
-    category: "chords"
-  },
-  {
-    title: "How to Use the Metronome (5 Techniques) – Beginner & Advanced",
-    url: "https://youtu.be/w3zw7PE9pW0",
-    category: "rhythm"
-  },
-  {
-    title: "MIDI Recording for Beginners | DAW, Setup, Signal Flow",
-    url: "https://youtu.be/a5i6jIHw20o",
-    category: "theory"
+    title: "Bella Ciao – Advanced Arrangement",
+    url: "https://youtu.be/BaTywzMGA2U",
+    category: "song-learning"
   }
 ];
 
 export function FreeTutorialsSection() {
-  const [selectedTutorials, setSelectedTutorials] = useState<Tutorial[]>([]);
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
-
-  // Select 4 diverse tutorials ensuring at least 1 from each major category
-  useEffect(() => {
-    const selectDiverseTutorials = () => {
-      const selected: Tutorial[] = [];
-      
-      // Ensure we have at least one from each required category
-      const pianoOptions = allTutorials.filter(t => t.category === "piano");
-      const earTrainingOptions = allTutorials.filter(t => t.category === "ear-training");
-      const chordsOptions = allTutorials.filter(t => t.category === "chords");
-      const rhythmTheoryOptions = allTutorials.filter(t => t.category === "rhythm" || t.category === "theory");
-      
-      // Pick one random from each category
-      if (pianoOptions.length > 0) {
-        selected.push(pianoOptions[Math.floor(Math.random() * pianoOptions.length)]);
-      }
-      
-      if (earTrainingOptions.length > 0) {
-        selected.push(earTrainingOptions[Math.floor(Math.random() * earTrainingOptions.length)]);
-      }
-      
-      if (chordsOptions.length > 0) {
-        selected.push(chordsOptions[Math.floor(Math.random() * chordsOptions.length)]);
-      }
-      
-      if (rhythmTheoryOptions.length > 0) {
-        selected.push(rhythmTheoryOptions[Math.floor(Math.random() * rhythmTheoryOptions.length)]);
-      }
-      
-      setSelectedTutorials(selected);
-    };
-    
-    selectDiverseTutorials();
-  }, []);
 
   const getVideoId = (url: string) => {
     return url.split("v=")[1]?.split("&")[0] || url.split("/").pop();
@@ -120,8 +75,6 @@ export function FreeTutorialsSection() {
     trackVideoPlay(`free_tutorial_${title.substring(0, 20)}`);
   };
 
-  if (selectedTutorials.length === 0) return null;
-
   return (
     <section className="py-8 md:py-12 lg:py-14 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
@@ -136,7 +89,7 @@ export function FreeTutorialsSection() {
             See How We Teach
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Understand our teaching style and class structure with these hand-picked lessons by our faculty.
+            Advanced piano techniques, theory, ear training, and musicianship from our intermediate-level curriculum.
           </p>
         </motion.div>
 

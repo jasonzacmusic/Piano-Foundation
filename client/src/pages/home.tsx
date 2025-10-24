@@ -12,8 +12,8 @@ import { CourseStructureSection } from "@/components/sections/course-structure-s
 import { CoursePreviewSection } from "@/components/sections/course-preview-section";
 import { FreeTutorialsSection } from "@/components/sections/free-tutorials-section";
 import { WhoIsForSection } from "@/components/sections/who-is-for-section";
+import { TeacherSection } from "@/components/sections/teacher-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
-import { InstagramReelsSection } from "@/components/sections/instagram-reels-section";
 import { FeesSection } from "@/components/sections/fees-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { SEOSection } from "@/components/sections/seo-section";
@@ -107,6 +107,8 @@ export default function Home() {
       <CourseStructureSection data={landingData.structure} />
       
       <WhoIsForSection data={landingData.whoIsFor} />
+      
+      <TeacherSection />
       
       <TestimonialsSection data={landingData.testimonials} />
       
