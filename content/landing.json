@@ -23,94 +23,97 @@
 
   "usps": [
     {
+      "icon": "GraduationCap",
+      "title": "Musician First, Pianist Second",
+      "description": "We focus on growing you as a complete musician - with theory, ear training, transcription, rhythm, and notation. Piano skills become a natural byproduct of musical understanding."
+    },
+    {
+      "icon": "Ear",
+      "title": "Learn Everything by Ear",
+      "description": "No memorization. You'll know the sixth of Bb major is G, hear it's a major sixth, and understand how it relates to surrounding notes - all by ear, applied to real songs."
+    },
+    {
+      "icon": "FileMusic",
+      "title": "Music Factory: Deep Song Analysis",
+      "description": "Our signature transcription class where you analyze entire songs - notation, chord logic, rhythm structure. You'll understand WHY composers chose each chord, not just WHAT they played."
+    },
+    {
+      "icon": "Dumbbell",
+      "title": "Music Gym: 3D Practice System",
+      "description": "Dedicated exercises targeting ears, technique, and theory. Structured practice that builds genuine skill, not just muscle memory."
+    },
+    {
+      "icon": "LayoutList",
+      "title": "Modular Learning Pathways",
+      "description": "3-4 lesson modules with clear goals: singing & playing, chord inversions, gospel music, seasonal songs. You always know exactly what you're working toward."
+    },
+    {
       "icon": "Music",
-      "title": "Bottom-Up Approach",
-      "description": "We start with rhythm, chords, and ear training before melody for real-world skills."
+      "title": "Rhythm Theory Included",
+      "description": "Unlike typical courses, we teach rhythm as theory - a complete system often missing from music education. Learn Konnakol, Afro-Cuban patterns, and complex metres."
     },
     {
-      "icon": "Piano",
-      "title": "All 12 Keys",
-      "description": "Go beyond C major - play confidently in every key."
-    },
-    {
-      "icon": "Users",
-      "title": "Accompaniment + Solo Playing",
-      "description": "Support singers & bands or perform solo with melody and harmony."
-    },
-    {
-      "icon": "Library",
-      "title": "Genre Diversity",
-      "description": "Learn blues, gospel, Bollywood, pop, and even Indian ragas."
-    },
-    {
-      "icon": "CheckCircle",
-      "title": "Assignments & Feedback",
-      "description": "Weekly practice, structured feedback, and real exams like a true school."
+      "icon": "Target",
+      "title": "Graded Certificate Program",
+      "description": "This is serious music education. Weekly homework, personalized feedback, grading, and exams. For students who want to become musicians, not hobbyists."
     },
     {
       "icon": "Video",
-      "title": "Flexible Modes",
-      "description": "Attend live online, offline in Bangalore or hybrid with HD recordings."
+      "title": "HD Recordings + Live Notes",
+      "description": "Every class recorded in HD quality. Plus handwritten notes, notation, supplementary resources, and practice tracks - lesson after lesson."
     },
     {
-      "icon": "Smile",
-      "title": "For All Ages",
-      "description": "We've trained students from age 7 to 75+, it's never too late to start."
-    },
-    {
-      "icon": "Headphones",
-      "title": "Ear Training & Listening Skills",
-      "description": "Develop your ear to recognize chords, scales, intervals, and rhythms, then transcribe melodies and play songs by ear."
-    },
-    {
-      "icon": "Music2",
-      "title": "Performance-Based Learning",
-      "description": "Apply what you learn through live stage performances, showcases, recordings, and structured graded exams."
+      "icon": "Calendar",
+      "title": "Flexible Time Zones & Scheduling",
+      "description": "Weekday mornings, evenings after work, or weekend slots. Choose from 32, 40, 50, or 65-hour packages over a 6-month semester that fits your schedule."
     }
   ],
 
   "syllabus": {
     "pianoSkills": {
-      "title": "Piano Skills",
+      "title": "Advanced Piano Technique",
       "icon": "Piano",
       "items": [
-        "Note recognition & 5-finger drills",
-        "Major, Minor, Pentatonic & Blues scales",
-        "Chord inversions, block chords, 12-bar blues",
-        "Left-hand patterns + right-hand melody",
-        "Styles: Waltz, Oom-Pah, Afro-Cuban, Folk, Rock"
+        "Swara variations with transposition & intervallic motion",
+        "Spider exercise for finger independence & chromatic mastery",
+        "Exploring thirds (major/minor) across all keys",
+        "Pendulum patterns with scale fluency & finger crossing",
+        "Highest-note inversions with melodic voicing",
+        "Oom-Pah left-hand grooves with agile right-hand melodies"
       ]
     },
     "theory": {
-      "title": "Music Theory",
+      "title": "Harmony & Advanced Theory",
       "icon": "BookOpen",
       "items": [
-        "Staff notation & note values",
-        "Intervals & circle of fifths",
-        "Chord progressions & harmony",
-        "Intro to ragas & transposition",
-        "Song structure basics"
+        "Chord shapes using the Circle of Fifths (all 12 keys)",
+        "Diatonic seventh chords & all seventh-chord families",
+        "Pivot thirds in major, harmonic minor, Dorian & melodic minor",
+        "The Mother of All Chord Progressions (diatonic circle)",
+        "ii-V-I progressions with block, Latin & arpeggio approaches",
+        "Modes: Mixolydian improv with scale-building & plagal cadences"
       ]
     },
     "earTraining": {
-      "title": "Ear Training",
+      "title": "Ear Training & Transcription",
       "icon": "Ear",
       "items": [
-        "Intervals & melodic curves",
-        "Transcription of melodies & rhythms",
-        "Identifying scales by ear",
-        "Computing song key by listening"
+        "Identifying intervals by ear (major/minor sixths, sevenths)",
+        "Transcribing melodies, rhythms & chord progressions",
+        "Recognizing scales, modes & chord qualities in real songs",
+        "Computing harmonic movement & bass lines",
+        "Music Factory: complete song analysis & notation"
       ]
     },
     "rhythm": {
-      "title": "Rhythm",
+      "title": "Rhythm & World Music Patterns",
       "icon": "Music2",
       "items": [
-        "Bars, beats & sub-beats",
-        "Straight vs swing feels",
-        "Triplets & sixteenth notes",
-        "Afro-Cuban rhythms & Claves",
-        "Basics of Konnakol"
+        "Accented arpeggios with irregular groupings & syncopation",
+        "Salsa Piano: Tresillo, Claves (3:2, 2:3, Rumba, Bossa)",
+        "Building rhythmic phrases with Konnakol (South Indian)",
+        "Blues with left-hand Charleston & dominant-7th patterns",
+        "Odd metres (7/8, 5/8) & complex accent schemes (3-3-2, 3-3-3-3-4)"
       ]
     }
   },
@@ -137,34 +140,34 @@
 
   "whoIsFor": [
     {
-      "emoji": "🎹",
-      "title": "Absolute Beginners",
-      "description": "Start your musical journey with confidence"
+      "icon": "TrendingUp",
+      "title": "Foundation Course Graduates",
+      "description": "Ready to advance beyond basics into sophisticated harmony, modes, and advanced technique"
     },
     {
-      "emoji": "🎵",
-      "title": "Hobbyists",
-      "description": "Turn your passion into performance"
+      "icon": "Piano",
+      "title": "Self-Taught Pianists",
+      "description": "You can play songs but want to understand the theory, chord logic, and harmonic movement behind them"
     },
     {
-      "emoji": "🎧",
-      "title": "Producers & DJs",
-      "description": "Add live piano skills to your productions"
+      "icon": "Brain",
+      "title": "Musicians Seeking Depth",
+      "description": "Want to grow as a complete musician - theory, ear training, transcription, and rhythm - not just piano technique"
     },
     {
-      "emoji": "✍️",
-      "title": "Songwriters",
-      "description": "Compose with deeper musical knowledge"
+      "icon": "Sparkles",
+      "title": "Performers & Improvisers",
+      "description": "Need to play in all 12 keys, understand modes, work with complex rhythms, and make real-time harmonic choices"
     },
     {
-      "emoji": "📚",
-      "title": "Classical Learners",
-      "description": "Trinity/ABRSM students seeking practical skills"
+      "icon": "BookOpen",
+      "title": "Trinity/ABRSM Advanced Students",
+      "description": "Seeking practical musicianship skills: transcription, playing by ear, and understanding why chords work"
     },
     {
-      "emoji": "🎓",
-      "title": "Aspiring Teachers",
-      "description": "Build the foundation to guide and inspire future students confidently"
+      "icon": "Award",
+      "title": "Serious Students (Any Age)",
+      "description": "Committed to weekly homework, assignments, grading, and genuine music education - no age limits, just dedication"
     }
   ],
 
