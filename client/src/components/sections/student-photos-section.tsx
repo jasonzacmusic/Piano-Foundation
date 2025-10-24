@@ -305,7 +305,7 @@ export function StudentPhotosSection() {
             Our Students in Action
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real students, real progress, real performances
+            A glimpse into our journey of learning, practice, and live performance.
           </p>
         </motion.div>
 
