@@ -29,6 +29,19 @@ export function USPSection({ data }: USPSectionProps) {
     show: { opacity: 1, y: 0 },
   };
 
+  // Gradient variations for each card
+  const cardGradients = [
+    "bg-gradient-to-br from-primary/5 via-card to-card",
+    "bg-gradient-to-br from-accent/8 via-card to-card",
+    "bg-gradient-to-br from-primary/8 via-accent/5 to-card",
+    "bg-gradient-to-br from-card via-primary/5 to-accent/8",
+    "bg-gradient-to-br from-accent/5 via-card to-primary/5",
+    "bg-gradient-to-br from-primary/6 via-card to-accent/6",
+    "bg-gradient-to-br from-card via-accent/6 to-primary/8",
+    "bg-gradient-to-br from-accent/6 via-primary/5 to-card",
+    "bg-gradient-to-br from-primary/7 via-accent/4 to-card",
+  ];
+
   return (
     <section className="py-8 md:py-12 lg:py-14 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
@@ -50,15 +63,16 @@ export function USPSection({ data }: USPSectionProps) {
         >
           {data.map((usp, index) => {
             const IconComponent = (Icons[usp.icon as keyof typeof Icons] || Icons.Music) as LucideIcon;
+            const gradientClass = cardGradients[index % cardGradients.length];
 
             return (
               <motion.div key={index} variants={item}>
                 <Card 
-                  className="p-6 md:p-8 h-full hover-elevate transition-all duration-300 border-card-border"
+                  className={`p-6 md:p-8 h-full hover-elevate transition-all duration-300 border-primary/10 ${gradientClass}`}
                   data-testid={`card-usp-${index}`}
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary/20 border border-primary/20 flex items-center justify-center">
                       <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-primary" />
                     </div>
                     
