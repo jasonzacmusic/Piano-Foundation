@@ -93,11 +93,11 @@ export default function Home() {
         onEnrollClick={handleEnrollmentClick}
       />
       
-      <FreeTutorialsSection />
+      <StudentPhotosSection />
       
       <USPSection data={landingData.usps} />
       
-      <StudentPhotosSection />
+      <FreeTutorialsSection />
       
       <SyllabusSection data={landingData.syllabus} />
       
