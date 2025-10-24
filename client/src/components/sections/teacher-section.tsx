@@ -1,28 +1,28 @@
 import { motion } from "framer-motion";
-import { Award, Users, Music, Mic } from "lucide-react";
+import { Youtube, Instagram, Music, Layers } from "lucide-react";
 import teacherImage from "@assets/Jason's Riffs and Tutorials_October 10th '24 Photos (1 of 1)-10_1761334416663.jpg";
 
 export function TeacherSection() {
   const highlights = [
     {
-      icon: Award,
-      title: "10+ Years Teaching",
-      description: "Result-driven method and engaging teaching style"
+      icon: Youtube,
+      title: "115k+ YouTube Subscribers",
+      description: "Comprehensive tutorials on piano, theory, and musicianship"
     },
     {
-      icon: Users,
-      title: "Multi-Genre Performer",
-      description: "Blues, Folk, Gospel, Indian Classical, and more"
+      icon: Instagram,
+      title: "15k+ Instagram Supporters",
+      description: "Daily tips, lessons, and music inspiration"
     },
     {
       icon: Music,
-      title: "Producer & Composer",
-      description: "Three solo albums and countless productions"
+      title: "Three Released Albums",
+      description: "Blending Indian Classical and Celtic Folk influences"
     },
     {
-      icon: Mic,
-      title: "Session Musician",
-      description: "Works with top bands like Thermal and a Quarter"
+      icon: Layers,
+      title: "Multi-Instrumentalist",
+      description: "Piano, bass, horns, percussion, and vocals"
     }
   ];
 
@@ -40,7 +40,7 @@ export function TeacherSection() {
             About Your Teacher
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Learn from Jason Zachariah, a multi-instrumentalist educator with deep roots in India's music legacy
+            Learn from Jason Zachariah, a Bangalore-based musician with over two decades of experience as a performer, educator, and producer
           </p>
         </motion.div>
 
@@ -70,29 +70,32 @@ export function TeacherSection() {
           >
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Jason Zachariah hails from an illustrious family of musician stalwarts. His grandfather, 
-                <strong className="text-foreground"> Walter Nathaniel</strong>, was one of the first proponents 
-                of Western Classical Music in India, while his paternal side has a rich tradition in Indian Classical Music.
+                Jason is the co-director of the <strong className="text-foreground">Nathaniel School of Music</strong> and 
+                runs a YouTube Education channel with over <strong className="text-foreground">115,000 subscribers</strong>, 
+                teaching piano, bass, music theory, composition, ear training, production, and rhythm concepts. His 
+                <strong className="text-foreground"> 15,000+ Instagram supporters</strong> benefit from daily music tips and lessons.
               </p>
               
               <p>
-                With over a decade of teaching experience, Jason jointly heads the 
-                <strong className="text-foreground"> Nathaniel School of Music</strong> in Bangalore, where he teaches 
-                piano, bass, and music production. His students describe him as an engaging and inspirational educator 
-                with a result-driven method.
+                His teaching style is best described as <strong className="text-foreground">custom-made to suit every level</strong>. 
+                Jason has a knack for identifying the best methods that are engaging, interactive, and flexible to suit the needs 
+                of almost any student. His workshops and tutorials are lauded in the music circle for being 
+                <strong className="text-foreground"> result-oriented</strong> while allowing space for students to learn and improvise 
+                above and beyond.
               </p>
               
               <p>
-                As a performer, Jason has been part of numerous bands including <strong className="text-foreground">Allegro Fudge</strong> (folk 
-                with Indian influences), <strong className="text-foreground">Blues Before Sunrise</strong> (blues and funk), and sessions 
-                for industry leaders like <strong className="text-foreground">Thermal and a Quarter</strong>, 
-                <strong className="text-foreground"> The Raghu Dixit Project</strong>, and <strong className="text-foreground">Lagori</strong>.
+                As a <strong className="text-foreground">multi-instrumentalist</strong>, Jason plays piano, bass, horns, assorted 
+                percussion, and sings. He has released <strong className="text-foreground">three albums</strong> to date, each showing 
+                his growth in musical expression, with the latest incorporating influences from Indian Classical Music and Celtic Folk. 
+                He has also performed with bands including <strong className="text-foreground">Allegro Fudge</strong>, blending folk with 
+                Indian influences.
               </p>
               
               <p>
-                His solo project culminates years of training and influences, blending Indian Classical Music with Celtic 
-                Folk across three albums. Jason is also a <strong className="text-foreground">Pro Tools certified operator</strong> and 
-                runs the Nathaniel Production House, producing jingles, singles, EPs, and albums for artists across the country.
+                Jason comes from a family of music pioneers. His grandfathers, <strong className="text-foreground">Walter Nathaniel</strong> and 
+                <strong className="text-foreground"> A.D. Zachariah</strong>, were key figures in Western and Indian Classical Music in India, 
+                respectively—a legacy that informs his unique approach to music education.
               </p>
             </div>
 
