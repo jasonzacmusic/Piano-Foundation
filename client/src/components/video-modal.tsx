@@ -17,7 +17,7 @@ export function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProps) {
     
     const videoId = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/)?.[1];
     if (videoId) {
-      return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0`;
     }
     return url;
   };

@@ -22,7 +22,7 @@ export function CoursePreviewSection({ data }: CoursePreviewProps) {
 
   const getYouTubeEmbedUrl = (url: string) => {
     const videoId = getVideoId(url);
-    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0`;
   };
 
   const getYouTubeThumbnail = (url: string) => {

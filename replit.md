@@ -12,6 +12,10 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**October 24, 2025 - YouTube Video & Content Updates**
+- Fixed YouTube video player to play immediately on first click (no double-click required)
+- Updated Course Structure: "20 Instrument classes" → "20 Practical Classes"
+
 **October 23, 2025 - Social Media Sharing & Favicon**
 - Updated social preview to use NSM logo (white version on dark background)
 - Generalized social media content (removed instructor-specific mentions)
