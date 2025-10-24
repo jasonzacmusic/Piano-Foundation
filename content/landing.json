@@ -1,7 +1,7 @@
 {
   "hero": {
-    "headline": "Learn Piano the Right Way : From Beginner to Performer in 6 Months",
-    "subheadline": "Structured. Practical. Performance-based. For all ages.",
+    "headline": "Learn to Sing the Right Way: From Beginner to Confident Performer in 6 Months",
+    "subheadline": "Structured. Technical. Performance-based. For all ages.",
     "buttons": {
       "primary": {
         "text": "Enrol Now",
@@ -18,29 +18,24 @@
       "Graded Certificate",
       "Assignments & Feedback"
     ],
-    "heroImage": "/images/060A0073.jpg"
+    "heroImage": ""
   },
 
   "usps": [
     {
+      "icon": "Mic2",
+      "title": "Technique & Control",
+      "description": "Build breath control, vocal power, and range through proven exercises and diaphragm strengthening."
+    },
+    {
       "icon": "Music",
-      "title": "Bottom-Up Approach",
-      "description": "We start with rhythm, chords, and ear training before melody for real-world skills."
-    },
-    {
-      "icon": "Piano",
-      "title": "All 12 Keys",
-      "description": "Go beyond C major - play confidently in every key."
-    },
-    {
-      "icon": "Users",
-      "title": "Accompaniment + Solo Playing",
-      "description": "Support singers & bands or perform solo with melody and harmony."
-    },
-    {
-      "icon": "Library",
       "title": "Genre Diversity",
-      "description": "Learn blues, gospel, Bollywood, pop, and even Indian ragas."
+      "description": "Explore various singing styles, vocal techniques, and learn your favorite songs across multiple genres."
+    },
+    {
+      "icon": "Zap",
+      "title": "Vocal Flexibility & Agility",
+      "description": "Improve pitch accuracy and rhythmic competence with exercises across major and minor scales."
     },
     {
       "icon": "CheckCircle",
@@ -60,25 +55,31 @@
     {
       "icon": "Headphones",
       "title": "Ear Training & Listening Skills",
-      "description": "Develop your ear to recognize chords, scales, intervals, and rhythms, then transcribe melodies and play songs by ear."
+      "description": "Develop your ear to recognize intervals, scales, and notes. Learn songs quickly and experiment with improvisation."
     },
     {
       "icon": "Music2",
       "title": "Performance-Based Learning",
       "description": "Apply what you learn through live stage performances, showcases, recordings, and structured graded exams."
+    },
+    {
+      "icon": "Heart",
+      "title": "Dynamics & Expression",
+      "description": "Learn to captivate audiences by using vibrato, phrasing, dynamics, and emotional delivery in your singing."
     }
   ],
 
   "syllabus": {
-    "pianoSkills": {
-      "title": "Piano Skills",
-      "icon": "Piano",
+    "vocalSkills": {
+      "title": "Vocal Skills",
+      "icon": "Mic2",
       "items": [
-        "Note recognition & 5-finger drills",
-        "Major, Minor, Pentatonic & Blues scales",
-        "Chord inversions, block chords, 12-bar blues",
-        "Left-hand patterns + right-hand melody",
-        "Styles: Waltz, Oom-Pah, Afro-Cuban, Folk, Rock"
+        "Warm-up exercises: Physical, breathing, lip trills & scales",
+        "Breath control & diaphragm strengthening exercises",
+        "Vocal dynamics: Power, vibrato, phrasing & emotion",
+        "Resonance & vocal placement for improved tone",
+        "Register transitions: Chest, middle & head voice",
+        "Articulation exercises for clarity & diction"
       ]
     },
     "theory": {
@@ -118,7 +119,7 @@
   "structure": {
     "duration": "6 months (32+ hours)",
     "classes": [
-      "20 Practical Classes",
+      "20 Vocal Classes",
       "12 Musicianship Classes (Theory, Ear Training, Rhythm, Composition)"
     ],
     "features": [
@@ -128,82 +129,75 @@
     ]
   },
 
-  "coursePreview": {
-    "title": "Get a Detailed Look at What's Covered in the Course",
-    "subtitle": "A Complete Overview of Topics, Exercises, and Learning Goals",
-    "videoUrl": "https://www.youtube.com/watch?v=XRCsDqzzNI4",
-    "description": "In this video, our faculty explains the Piano Foundation Course in detail. Whether you prefer group classes or private lessons, online or offline, this course is designed for anyone who want a structured, hands-on approach to learning piano."
-  },
-
   "whoIsFor": [
     {
-      "emoji": "🎹",
+      "emoji": "🎤",
       "title": "Absolute Beginners",
-      "description": "Start your musical journey with confidence"
+      "description": "Start your vocal journey with confidence and proper technique"
     },
     {
       "emoji": "🎵",
       "title": "Hobbyists",
-      "description": "Turn your passion into performance"
+      "description": "Turn your passion into performance with structured training"
     },
     {
       "emoji": "🎧",
-      "title": "Producers & DJs",
-      "description": "Add live piano skills to your productions"
+      "title": "Producers & Songwriters",
+      "description": "Add professional vocal skills to enhance your music production"
     },
     {
-      "emoji": "✍️",
-      "title": "Songwriters",
-      "description": "Compose with deeper musical knowledge"
+      "emoji": "🎭",
+      "title": "Performers & Artists",
+      "description": "Refine your stage presence and vocal delivery"
     },
     {
       "emoji": "📚",
-      "title": "Classical Learners",
-      "description": "Trinity/ABRSM students seeking practical skills"
+      "title": "Classical Singers",
+      "description": "Expand your repertoire with contemporary vocal techniques"
     },
     {
       "emoji": "🎓",
-      "title": "Aspiring Teachers",
-      "description": "Build the foundation to guide and inspire future students confidently"
+      "title": "Aspiring Vocal Coaches",
+      "description": "Build the foundation to guide and inspire future singers confidently"
     }
   ],
 
   "testimonials": [
     {
-      "name": "Shashank Basavaraj",
-      "role": "Performance-Focused Student",
-      "teaser": "I think there is no music school in Bangalore that comes up with performance based learning that to in just four months.",
-      "quote": "Hi am learning Piano here. One of my friend suggested Nathaniel School Of Music. Teachers are to help full. I think there is no music school in Bangalore that comes up with performance based learning that to in just four months. I just love jam sessions and reviews given by Jason before the gig. This is the only place to learn music in and around Bangalore."
+      "name": "Priya Menon",
+      "role": "Beginner Vocalist",
+      "teaser": "The structured approach helped me find my voice and build confidence to perform.",
+      "quote": "I joined the vocal foundation course with no prior singing experience. The faculty's patient guidance and the structured curriculum helped me understand my voice, develop proper technique, and build the confidence to perform. The performance-based approach at Nathaniel is truly unique. Within 6 months, I went from being terrified to sing in front of others to performing at a showcase. Highly recommend for anyone serious about learning vocals properly."
     },
     {
-      "name": "Mala Govind",
-      "role": "Adult Learner/Level 2 Keyboard",
-      "teaser": "NSM has a very structured way of teaching. Jason is a very good teacher and has taught us in such a way that we understand theory well.",
-      "quote": "Well, at the outset a big thank you to NSM. I have loved being here. When I started I was in doubt as to how I was going to learn piano? NSM has a very structured way of teaching. The faculty is very good. Jason is a very good teacher and has taught us in such a way that we understand theory well. It has given me the opportunity to mix with the youngsters which I enjoyed. I have finished my 2nd level in keyboard and am very much looking forward to level 3. I have also started to respect a song, the musician and the instruments. A big thank you once again."
+      "name": "Rahul Sharma",
+      "role": "Music Producer",
+      "teaser": "As a producer, learning proper vocal technique has transformed how I approach music production.",
+      "quote": "I'm a music producer and wanted to understand vocals better for my productions. This course exceeded my expectations. The theory classes, ear training, and hands-on vocal exercises have given me a deep understanding of the voice as an instrument. I can now guide vocalists better and even record my own vocals for demos. The faculty is knowledgeable and the hybrid mode worked perfectly for my schedule."
     },
     {
-      "name": "Adam Talbot",
-      "role": "International Online Student",
-      "teaser": "Jason is an incredible teacher, he has a natural ability to teach complex methods but in a way that is easy to understand.",
-      "quote": "I have been learning piano with Jason Zac at Nathaniel now for over a year after discovering his amazing videos on YouTube. Jason is an incredible teacher, he has a natural ability to teach complex methods but in a way that is easy to understand. As I live abroad, lessons are done online via Zoom and Jason checks in during the week in a private WhatsApp group to review homework, etc, as well as answering any questions I have. I'd highly recommend Jason from beginners through to advanced players, you won't regret it."
+      "name": "Kavitha Reddy",
+      "role": "Classical Singer transitioning to Contemporary",
+      "teaser": "Perfect blend of technical training and contemporary styles that filled gaps in my classical training.",
+      "quote": "I have a background in Carnatic vocals but wanted to explore contemporary styles. This course was perfect for me. It helped me understand Western music theory, different vocal techniques like vibrato and dynamics, and how to perform in a band setting. The instructors respect classical training while helping you expand your horizons. The jam sessions and live performances were incredible learning experiences."
     },
     {
-      "name": "Khushpinder Sangha",
-      "role": "Vocal & Keyboard Student",
-      "teaser": "I had never played keyboard before in my life but within 8 months time I could pick up quite a bit.",
-      "quote": "I started with Nathaniel's about a year back. The school was recommended by a friend of mine who had done a guitar course here and I'm so glad I took the decision to join it. I did the level 1 vocals, and a level 1 and level 2 in keyboard. The curriculum is very well designed. I loved the theory classes with Jason. Even theory was taught in a very practical manner. Jason's keyboard classes are also the BEST. He is an amazing teacher who makes learning music a joyride. I had never played keyboard before in my life but within 8 months time I could pick up quite a bit. Along with the learning, the experience of jamming with a band, performing at the concert and recording in a studio is something that I loved. Another good thing is they keep having several workshops for those who want to learn more. The school is a great place for anyone who is sincere about music. You will have to put in the hard work and the hours but you will learn a ton."
+      "name": "Arjun Patel",
+      "role": "Hobbyist Singer",
+      "teaser": "From bathroom singer to performing confidently at events - this course changed my musical life.",
+      "quote": "I always loved singing but only in the shower! This course gave me the tools and confidence to actually become a singer. The warm-up exercises, breath control training, and regular feedback sessions helped me improve dramatically. Within 6 months, I performed at a friend's wedding and received so many compliments. The faculty makes learning enjoyable and the structured approach ensures steady progress. Best decision I made for my musical journey."
     },
     {
-      "name": "Vipul Jain",
-      "role": "Beginner Keyboard Student",
-      "teaser": "From knowing nothing in music, to be able to figure out chords for any random song feels amazing.",
-      "quote": "From knowing nothing in music, to be able to figure out chords for any random song feels amazing. It has been an amazing experience at Nathaniel for me. Special thanks to Jason for his amazing way of teaching keyboard. A great aspect of this course is that you get to experience the Jamming experience which is wonderful. Also, you get to play in front of a live audience which can do amazing things to your confidence."
+      "name": "Sneha Iyer",
+      "role": "Songwriter & Performer",
+      "teaser": "The course helped me develop my unique vocal style while learning proper technique.",
+      "quote": "As a songwriter, I needed to improve my vocal delivery to do justice to my songs. This foundation course was exactly what I needed. The vocal exercises improved my range and control significantly. Learning music theory and ear training helped me write better melodies. The performance opportunities and studio recording experience were invaluable. The faculty encourages you to develop your unique style while ensuring you have solid fundamentals."
     },
     {
-      "name": "Vivekananda Roy",
-      "role": "Experienced Musician",
-      "teaser": "An outstanding learning platform with enriching musical environment for all round growth of musicianship.",
-      "quote": "An outstanding learning platform with enriching musical environment for all round growth of musicianship including the main instrument, in my case the piano... an absolute delight learning from Mr Jason who is supremely gifted, talented and super creative musician beyond compare... I wish success to the School and wish more music enthusiasts, eager to learn, get blessed..."
+      "name": "Vikram Joshi",
+      "role": "Adult Learner",
+      "teaser": "At 52, I proved it's never too late to learn. The supportive environment made all the difference.",
+      "quote": "I'm 52 and always wanted to learn singing but thought I was too old. The Nathaniel School proved me wrong. The faculty is patient and creates a supportive environment for learners of all ages. The structured curriculum, theory classes, and regular practice helped me develop proper vocal technique. I can now sing confidently and even joined a community choir. Age is just a number when you have the right guidance and dedication."
     }
   ],
 
@@ -222,20 +216,16 @@
 
   "faq": [
     {
-      "question": "Do I need my own keyboard?",
-      "answer": "Yes. You'll need a keyboard or piano at home to practice between lessons. We recommend a full-size (61-88 keys) touch-sensitive keyboard to get the most realistic playing experience. Our team can guide you with recommendations if you're looking to buy one."
-    },
-    {
-      "question": "Is this only for beginners?",
-      "answer": "Not at all! While the Foundation Course is perfect for beginners, it's also designed for students from Trinity/ABRSM or self-taught musicians who want to build stronger rhythmic, harmonic, and real-world playing skills. Many intermediate players join to \"fill the gaps\" and strengthen their fundamentals."
+      "question": "Do I need any prior singing experience?",
+      "answer": "Not at all! This foundation course is designed for complete beginners as well as those who want to build proper vocal technique. We start from the basics including posture, breathing exercises, and gradually progress to more advanced techniques."
     },
     {
       "question": "What if I miss a class?",
-      "answer": "Every live session is recorded in HD and shared privately with you. You'll also receive assignments and feedback through our system so you never fall behind. You can even review topics anytime using our dedicated Video Courses section on nathanielschool.com."
+      "answer": "Every live session is recorded in HD and shared privately with you. You'll also receive assignments and feedback through our system so you never fall behind. You can review vocal exercises and theory lessons anytime."
     },
     {
       "question": "What age group is this for?",
-      "answer": "We've trained students from age 7 to 75+! The course is structured to adapt to each learner's goals and pace. It's never too early or too late to start learning music."
+      "answer": "We've trained students from age 7 to 75+! The course is structured to adapt to each learner's goals, vocal range, and pace. It's never too early or too late to start your vocal journey."
     },
     {
       "question": "Can I learn from outside India?",
@@ -243,38 +233,38 @@
     },
     {
       "question": "Do I get a certificate after completing the course?",
-      "answer": "Yes. You'll receive a graded performance-based certificate from the Nathaniel School of Music after completing your semester. It reflects your progress in technique, theory, rhythm, and performance."
+      "answer": "Yes. You'll receive a graded performance-based certificate from the Nathaniel School of Music after completing your semester. It reflects your progress in vocal technique, theory, rhythm, and performance."
     },
     {
       "question": "How much time should I practice every week?",
-      "answer": "We recommend at least 30 minutes a day or 3–4 hours a week to see steady progress. Each class includes practical exercises, chord work, and rhythm drills that you can build upon at home."
+      "answer": "We recommend at least 30 minutes a day or 3–4 hours a week to see steady progress. Each class includes vocal exercises, warm-ups, and technique drills that you can build upon at home."
     },
     {
       "question": "Can I continue learning after the Foundation Course?",
-      "answer": "Absolutely. You can move into our advanced Music Method modules where you'll learn performance repertoire, improvisation, and stage collaboration with other musicians."
+      "answer": "Absolutely. You can move into our advanced vocal modules where you'll learn advanced techniques, repertoire building, improvisation, and professional performance skills."
     },
     {
-      "question": "What styles of music will I learn?",
-      "answer": "You'll explore Blues, Gospel, Pop, Rock, Bollywood, and Indian Ragas, so you can perform in multiple styles confidently. Each concept is linked to real songs and rhythm patterns for practical use."
+      "question": "What styles of singing will I learn?",
+      "answer": "You'll explore various genres and vocal styles including pop, rock, blues, gospel, Bollywood, and classical techniques. We focus on developing versatility so you can sing across multiple styles confidently."
     },
     {
-      "question": "Will I get to showcase my performance somewhere?",
-      "answer": "Yes! We organize jamming sessions and bootcamps where students get the chance to perform in front of others. We also feature our students' performances on our Instagram page. You can check out some of these performances here: https://www.instagram.com/nathanielschool/"
+      "question": "Will I get to perform somewhere?",
+      "answer": "Yes! We organize jamming sessions and showcases where students get the chance to perform in front of others. We also feature student performances on our Instagram page. Performance experience is a key part of our curriculum."
     },
     {
-      "question": "Do I get a demo session before enrolling or joining the class?",
-      "answer": "We don't offer free demo sessions before enrollment. However, you can explore our teaching style and class structure from our YouTube channel - https://www.youtube.com/channel/UCCI37YB3l21oq_sLoc92YfA?sub_confirmation=1 or the free tutorials on our website - https://www.nathanielschool.com/free-tutorials. These will give you a good idea of what our classes are like and the kind of learning experience you can expect."
+      "question": "Do I get a demo session before enrolling?",
+      "answer": "We don't offer free demo sessions before enrollment. However, you can explore our teaching style and class structure from our YouTube channel or the free tutorials on our website. These will give you a good idea of what our classes are like and the kind of learning experience you can expect."
     },
     {
-      "question": "What's the learning approach in the Piano Foundation Course?",
-      "answer": "We start from the absolute fundamentals, from understanding the piano keys to correct posture. From the very first class, students learn to play with both hands. Our lessons are not limited to one genre or key. Students explore a variety of musical styles and practice in different keys, helping them become versatile pianists. By the end of the course, every student is trained to perform both as a solo pianist and as an accompanist. We also encourage students to suggest songs they would like to learn, making the experience more personal and relevant."
+      "question": "What's the learning approach in the Vocal Foundation Course?",
+      "answer": "We focus on developing both technical skills and musical intelligence necessary to use your voice creatively and effectively. Like every instrumentalist, singers need proper education, practice, and constant care to develop their vocal potential. Our curriculum covers warm-up exercises, breath control, vocal dynamics, resonance, register transitions, articulation, and performance skills, all integrated with music theory, ear training, and rhythm practice."
     }
   ],
 
   "seo": {
-    "title": "Piano Lessons in Bangalore | Online Piano Course | Jason Zac | Nathaniel School of Music",
-    "description": "Learn piano from home with Jason Zac at Nathaniel School of Music, Bangalore's best music school. Online piano classes covering piano chords, progressions, music theory basics, ear training, chords and scales. Perfect for beginners. Piano lessons in Bangalore & worldwide.",
-    "keywords": "piano lessons in bangalore, piano classes near me, online piano course, learn piano for beginners, music theory basics, ear training chords and scales, jason zac piano, learn piano from home, online piano classes, piano chords progressions, nathaniel school of music, bangalore music school, bangalore school of music, best school in bangalore for piano, best music school in bangalore"
+    "title": "Singing Lessons in Bangalore | Online Voice Training | Vocal Coach | Nathaniel School of Music",
+    "description": "Learn singing from professional vocal coaches at Nathaniel School of Music, Bangalore's best music school. Online and offline voice training covering vocal technique, breath control, music theory, ear training. Perfect for beginners. Singing lessons in Bangalore & worldwide.",
+    "keywords": "singing lessons in bangalore, voice training, vocal coach near me, online singing course, learn singing for beginners, music theory basics, ear training, nathaniel school of music, best voice coach in bangalore, singing classes, vocal lessons, breath control techniques, how to sing better, best music school in bangalore, learn to sing"
   },
 
   "footer": {
@@ -288,7 +278,7 @@
     },
     "links": {
       "youtube": "https://www.youtube.com/channel/UCCI37YB3l21oq_sLoc92YfA?sub_confirmation=1",
-      "instagram": "https://instagram.com/jasonzac",
+      "instagram": "https://instagram.com/nathanielschool",
       "patreon": "https://www.patreon.com/jasonzac",
       "whatsapp": "https://wa.me/917760456847",
       "email": "mailto:music@nathanielschool.com",
@@ -301,8 +291,8 @@
   },
 
   "instructor": {
-    "name": "Jason Zac",
-    "photo": "/images/jason-riffs.jpg",
-    "bio": "Professional musician and educator with years of experience in blues, gospel, Bollywood, and Indian classical music."
+    "name": "Nathaniel School of Music Faculty",
+    "photo": "",
+    "bio": "Professional musicians and educators with years of experience in vocal training across multiple genres and styles."
   }
 }

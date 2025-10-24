@@ -9,7 +9,6 @@ import { USPSection } from "@/components/sections/usp-section";
 import { StudentPhotosSection } from "@/components/sections/student-photos-section";
 import { SyllabusSection } from "@/components/sections/syllabus-section";
 import { CourseStructureSection } from "@/components/sections/course-structure-section";
-import { CoursePreviewSection } from "@/components/sections/course-preview-section";
 import { FreeTutorialsSection } from "@/components/sections/free-tutorials-section";
 import { WhoIsForSection } from "@/components/sections/who-is-for-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -93,8 +92,6 @@ export default function Home() {
         data={heroData} 
         onEnrollClick={handleEnrollmentClick}
       />
-      
-      <CoursePreviewSection data={landingData.coursePreview} />
       
       <FreeTutorialsSection />
       
