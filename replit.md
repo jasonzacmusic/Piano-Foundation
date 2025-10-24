@@ -1,36 +1,16 @@
-# Nathaniel School of Music - Foundation Vocal Course Landing Page
+# Nathaniel School of Music - Foundation Piano Course Landing Page
 
 ## Overview
 
-This is a single-page marketing website for the Nathaniel School of Music's Foundation Vocal Course. The application is designed as a lead-generation landing page with a primary focus on converting visitors into course enrollments through strategic CTAs, geo-targeted pricing, and seamless contact integration.
+This is a single-page marketing website for the Nathaniel School of Music's Foundation Piano Course. The application is designed as a lead-generation landing page with a primary focus on converting visitors into course enrollments through strategic CTAs, geo-targeted pricing, and seamless contact integration.
 
-The site showcases a 6-month structured vocal training program that combines singing technique, breath control, music theory, ear training, and rhythm, available in online, offline (Bangalore), and hybrid modes. The page emphasizes proper vocal technique and performance-based musical education.
+The site showcases a 6-month structured piano training program that combines playing, theory, ear training, and rhythm, available in online, offline (Bangalore), and hybrid modes. The page emphasizes the unique "bottom-up" teaching approach and comprehensive musical education.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
-
-**October 24, 2025 - Complete Conversion to Vocal Foundation Course**
-- Changed color scheme from warm brown (hue 30-45°) to coral/salmon (hue 12-15°) to distinguish from Piano/Guitar pages
-- Deleted ALL images except NSM logos (black, white, main) from client/public/images
-- Removed Course Preview section entirely from home page
-- Completely rewrote landing.json with vocal-specific content:
-  - Hero: "Learn to Sing the Right Way: From Beginner to Confident Performer in 6 Months"
-  - USPs: Added 3 new vocal-specific (Technique & Control, Vocal Flexibility & Agility, Dynamics & Expression)
-  - Syllabus: Changed from Piano Skills to Vocal Skills (warm-ups, breath control, vocal dynamics, resonance, register transitions, articulation)
-  - Course Structure: "20 Vocal Classes" (not "Practical Classes" or "Instrument Classes")
-  - Testimonials: 6 completely new vocal-focused testimonials
-  - FAQs: Removed piano-specific questions, added vocal-relevant ones
-  - Who Is This For: Updated for vocal learners (vocalists, performers, producers, classical singers transitioning)
-- Updated Student Photos section with 150+ vocal-focused rotating highlights
-- Removed all Jason Zac mentions - now "Nathaniel School of Music Faculty"
-- Updated SEO meta tags and keywords for vocal training focus:
-  - singing lessons in bangalore, voice training, vocal coach, online singing course
-  - breath control techniques, how to sing better, learn to sing
-- Updated social media Open Graph and Twitter Card meta tags for vocals course
-- SEO section completely rewritten for vocal training search optimization
 
 **October 24, 2025 - YouTube Video & Content Updates**
 - Fixed YouTube video player to play immediately on first click (no double-click required)
@@ -98,24 +78,23 @@ Preferred communication style: Simple, everyday language.
 **Styling & Design System**
 - **Tailwind CSS**: Utility-first CSS framework with custom design tokens
 - **shadcn/ui**: Pre-built accessible component library built on Radix UI primitives
-- **Design Philosophy**: Modern vocal performance aesthetic with coral/salmon tones (12-15° hue), warm accent colors, designed to distinguish from Piano (30-45° hue) and Guitar pages
+- **Design Philosophy**: Vintage/rustic piano conservatory aesthetic with warm brown tones (30° hue, 8-18% saturation), cream text, and antique gold accents (42° hue)
 - **Typography**: Playfair Display (serif) for headings, Inter (sans-serif) for body text
 - **Animations**: Framer Motion for subtle fade/slide effects on scroll
 
 **Component Architecture**
 - Section-based organization (`/client/src/components/sections/`) for landing page blocks
 - Reusable UI components from shadcn/ui (`/client/src/components/ui/`)
-- Modular design allowing independent updates to all 10 sections:
+- Modular design allowing independent updates to all 11 sections:
   - Hero (with A/B testing support)
-  - Free Tutorials
-  - USPs (9 feature cards - 6 core + 3 vocal-specific)
-  - Student Photos (with 150+ rotating vocal highlights)
-  - Syllabus (4 learning categories: Vocal Skills, Theory, Ear Training, Rhythm)
+  - USPs (7 feature cards)
+  - Syllabus (4 learning categories)
   - Course Structure
-  - Who It's For (6 learner types)
+  - Course Preview (new - demo video section)
+  - Who It's For (5 learner types)
   - Testimonials (6 reviews in interactive carousel)
   - Fees (geo-targeted pricing)
-  - FAQ (accordion with vocal-specific questions)
+  - FAQ (accordion)
   - SEO paragraph
   - Footer
 
@@ -143,8 +122,7 @@ Preferred communication style: Simple, everyday language.
 **Content Management**
 - JSON-based content system (`/content/landing.json`) for non-technical content updates
 - All copy, pricing, links, and structured data managed through JSON without code changes
-- Asset management via `/public/images` (currently only NSM logos - no student/instructor photos)
-- Student highlights dynamically managed in StudentPhotosSection component (150+ vocal-focused phrases)
+- Asset management via `/attached_assets` and `/public/images`
 
 ### Data Storage Solutions
 
@@ -187,12 +165,8 @@ Preferred communication style: Simple, everyday language.
   - Primary CTA button text variations (4 variants)
   - Automatic variant assignment and exposure tracking
   - Conversion tracking tied to A/B test variants
-- **SEO Optimization for Vocals**:
-  - Primary keywords: singing lessons in bangalore, voice training, vocal coach near me, online singing course
-  - Secondary keywords: learn singing for beginners, breath control techniques, how to sing better, best music school in bangalore
-  - Meta description optimized for vocal training and voice lessons
 - Structured data (JSON-LD schema) for Course, Organization, and Offer markup
-- Open Graph and Twitter Card meta tags optimized for vocal course social sharing
+- Open Graph and Twitter Card meta tags for social sharing
 - Semantic HTML with proper heading hierarchy
 
 **Deployment Considerations**
