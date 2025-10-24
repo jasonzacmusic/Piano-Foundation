@@ -58,8 +58,8 @@ export function USPSection({ data }: USPSectionProps) {
                   data-testid={`card-usp-${index}`}
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-accent/30 flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-accent-foreground" />
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-primary" />
                     </div>
                     
                     <h3 className="font-serif text-xl md:text-2xl font-semibold">

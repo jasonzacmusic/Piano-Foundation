@@ -105,8 +105,8 @@ export function TeacherSection() {
                 return (
                   <div key={index} className="space-y-2">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-accent/30 flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-4 h-4 text-accent-foreground" />
+                      <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="w-4 h-4 text-primary" />
                       </div>
                       <h3 className="font-semibold text-sm">{item.title}</h3>
                     </div>
