@@ -1,16 +1,36 @@
-# Nathaniel School of Music - Foundation Piano Course Landing Page
+# Nathaniel School of Music - Intermediate Piano Course Landing Page
 
 ## Overview
 
-This is a single-page marketing website for the Nathaniel School of Music's Foundation Piano Course. The application is designed as a lead-generation landing page with a primary focus on converting visitors into course enrollments through strategic CTAs, geo-targeted pricing, and seamless contact integration.
+This is a single-page marketing website for the Nathaniel School of Music's Intermediate Piano Course taught by Jason Zachariah. The application is designed as a lead-generation landing page with a primary focus on converting visitors into course enrollments through strategic CTAs, geo-targeted pricing, and seamless contact integration.
 
-The site showcases a 6-month structured piano training program that combines playing, theory, ear training, and rhythm, available in online, offline (Bangalore), and hybrid modes. The page emphasizes the unique "bottom-up" teaching approach and comprehensive musical education.
+The site showcases a 6-month intermediate/advanced piano training program featuring Music Factory (transcription & analysis), Music Gym (3D skill exercises), modular learning pathways, and graded certification. Available in online, offline (Bangalore), and hybrid modes. The page emphasizes Jason Zachariah's credentials (115k+ YouTube, 15k+ Instagram) and the advanced musicianship development approach.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
+
+**October 25, 2025 - SEO & Social Sharing Optimization for Intermediate Course**
+- Generated custom social preview image with purple/violet gradient matching intermediate course branding
+- Updated all SEO meta tags for intermediate/advanced course content
+- Updated page title to emphasize "Intermediate Piano Course | Advanced Music Training | Jason Zachariah"
+- Enhanced meta description highlighting Music Factory, Music Gym, graded certification, and Jason's 115k+ YouTube presence
+- Updated Open Graph tags for Facebook, Instagram, LinkedIn, and WhatsApp with intermediate-specific content
+- Updated Twitter Card meta tags for X platform with advanced course details
+- Keywords optimized for "intermediate piano course", "advanced piano lessons", "graded certification", "quartal harmony", "voice leading"
+- Canonical URL updated to reflect intermediate course path
+
+**October 25, 2025 - Student Photo Highlights Updated for Intermediate Course**
+- Completely rewrote all 150+ student photo highlights to reflect intermediate/advanced content
+- Added Music Factory and Music Gym concepts throughout
+- Included advanced piano techniques: quartal harmony, drop voicings, polyrhythms, interval magic
+- Added advanced theory: modal interchange, secondary dominants, Barry Harris concepts, voice leading
+- Incorporated world music: Konnakol, Afro-Cuban, Brazilian rhythms
+- Emphasized Jason Zachariah's credentials: 115k+ YouTube, 15k+ Instagram, multi-instrumentalist
+- Updated testimonials to reflect intermediate-level student experiences
+- Highlighted graded certification and modular pathways
 
 **October 24, 2025 - YouTube Video & Content Updates**
 - Fixed YouTube video player to play immediately on first click (no double-click required)
